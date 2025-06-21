@@ -1,47 +1,130 @@
-<!-- Save this as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My GitHub Webpage</title>
+    <title>Prof. Jagnyashini Debadarshini - Faculty Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            padding: 20px;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
         }
         header {
-            background-color: #24292e;
+            background-color: #003366;
             color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004080;
+        }
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #0059b3;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .profile-img {
+            float: right;
+            margin: 0 0 20px 20px;
+            border-radius: 8px;
+            max-width: 200px;
         }
         section {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        section.active {
+            display: block;
         }
         footer {
-            margin-top: 20px;
+            background-color: #003366;
+            color: white;
             text-align: center;
-            font-size: 0.9em;
-            color: #666;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Hello from GitHub Pages!</h1>
+        <h1>Prof. Jagnyashini Debadarshini</h1>
+        <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
     </header>
-    <section>
-        <h2>About</h2>
-        <p>This webpage is hosted on GitHub Pages! It's a free static hosting service by GitHub.</p>
-    </section>
+
+    <nav>
+        <a href="#" onclick="showTab('about')">About</a>
+        <a href="#" onclick="showTab('research')">Research</a>
+        <a href="#" onclick="showTab('publications')">Publications</a>
+        <a href="#" onclick="showTab('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="about" class="active">
+            <img src="profile.jpg" alt="Profile Image" class="profile-img" />
+            <h2>About Me</h2>
+            <p>I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee. My research interests include IoT systems, industrial metaverse, network protocols, and edge computing.</p>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>IoT Systems Design & Protocols</li>
+                <li>Industrial Metaverse & Digital Twins</li>
+                <li>5G/6G Network Integration with IoT</li>
+                <li>Edge Computing & Resource Allocation</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Debadarshini, J., et al. "Adaptive Concurrent-Transmission based Real-Time Data Collection in IoT," <i>IEEE IoT Journal</i>, 2024.</li>
+                <li>Debadarshini, J., et al. "Resource Allocation in IoT-assisted Industrial Metaverse," <i>Elsevier Computer Networks</i>, 2025.</li>
+            </ul>
+            <p>Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:jagnyashini@iitr.ac.in">jagnyashini@iitr.ac.in</a></p>
+            <p>Office: CSE Dept, IIT Roorkee</p>
+            <p>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </p>
+        </section>
+
+    </div>
+
     <footer>
-        &copy; 2025 My GitHub Page
+        &copy; 2025 Prof. Jagnyashini Debadarshini | IIT Roorkee
     </footer>
+
+    <script>
+        function showTab(tabId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>

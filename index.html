@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dr. Jagnyashini Debadarshini | Assistant Professor | IIT Roorkee</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,17 +13,20 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #003366;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #004080;
         }
+
         nav a {
             padding: 14px 20px;
             display: block;
@@ -30,9 +35,11 @@
             font-weight: bold;
             cursor: pointer;
         }
+
         nav a:hover {
             background-color: #0059b3;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
@@ -49,6 +56,9 @@
         .about-section {
             flex: 2;
             min-width: 300px;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 16px;
         }
 
         .news-section {
@@ -58,8 +68,15 @@
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateX(50px); }
-            100% { opacity: 1; transform: translateX(0); }
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .profile-img {
@@ -72,6 +89,7 @@
         section {
             display: none;
         }
+
         section.active {
             display: block;
         }
@@ -81,7 +99,11 @@
             background-color: #e6f0ff;
             border-left: 5px solid #0059b3;
             border-radius: 6px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
         }
+
         .news-item {
             margin-bottom: 10px;
         }
@@ -98,6 +120,7 @@
             .flex-row {
                 flex-direction: column;
             }
+
             .profile-img {
                 float: none;
                 display: block;
@@ -106,164 +129,163 @@
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Dr. Jagnyashini Debadarshini</h1>
-    <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
-</header>
+    <header>
+        <h1>Dr. Jagnyashini Debadarshini</h1>
+        <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
+    </header>
 
-<nav>
-    <a href="#" onclick="showTab('about')">Home</a>
-    <a href="#" onclick="showTab('research')">Research</a>
-    <a href="#" onclick="showTab('publications')">Publications</a>
-    <a href="#" onclick="showTab('contact')">Contact</a>
-</nav>
+    <nav>
+        <a href="#" onclick="showTab('about')">Home</a>
+        <a href="#" onclick="showTab('research')">Research</a>
+        <a href="#" onclick="showTab('publications')">Publications</a>
+        <a href="#" onclick="showTab('contact')">Contact</a>
+    </nav>
 
-<div class="container">
+    <div class="container">
 
-    <section id="about" class="active">
-        <div class="flex-row">
-            <!-- About Me section -->
-            <div class="about-section" style="line-height: 1.6; text-align: justify; font-size: 16px;">
-                <img src="jagnyashini.jpg" alt="Profile Image" class="profile-img" />
-                <h2>About Me</h2>
-                <p>
-                    I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee.
-                    I worked as a Postdoctoral Researcher at the National University of Singapore (NUS).
-                    I completed my Ph.D. as a Prime Minister's Research Fellow (PMRF) at the Indian Institute of Technology, Bhubaneswar.
-                    I have six years of work experience in the networking and telecommunication domain at the Centre for Development of Telematics (CDOT), Government of India.
-                </p>
-                <p>
-                    My research interests include IoT systems, network protocols, and edge computing.
-                    My work focuses on designing and developing efficient protocols for large-scale IoT systems,
-                    data collection strategies for digital twin synchronization in the Metaverse,
-                    and innovative resource allocation approaches for IoT-enabled Metaverse systems.
-                </p>
-            </div>
+        <!-- About Section -->
+        <section id="about" class="active">
+            <div class="flex-row">
 
-            <!-- News & Announcements section -->
-            <div class="news-section">
-                <div class="news" style="max-height: 300px; overflow-y: auto; padding-right: 10px;">
-                    <h3>News & Announcements</h3>
-                    <div class="news-item">
-                        <strong>[June 2025]</strong> Joined <i>IIT Roorkee</i> as Assistant Professor.
-                    </div>
-                    <div class="news-item">
-                        <strong>[Apr 2025]</strong> Paper accepted at IEEE VTC-Spring 2025.
-                    </div>
-                    <div class="news-item">
-                        <strong>[Oct 2024]</strong> Joined <i>NUS, Singapore</i> as Research Fellow.
-                    </div>
-                    <div class="news-item">
-                        <strong>[Sept 2024]</strong> Paper accepted at ACM SenSys 2024.
-                    </div>
-                    <div class="news-item">
-                        <strong>[August 2024]</strong> Joined <i>KIIT, Bhubaneswar</i> as Assistant Professor.
-                    </div>
-                    <div class="news-item">
-                        <strong>[July 2024]</strong> Defended <i>PhD Thesis</i>.
-                    </div>
-                    <div class="news-item">
-                        <strong>[Aug 2020]</strong> Selected for <i>Prime Minister Research Fellowship (PMRF, 2020)</i>.
-                    </div>
-                    <div class="news-item">
-                        <strong>[Aug 2020]</strong> Joined <i>IIT Bhubaneswar</i> as PhD Research Scholar.
+                <!-- About Me -->
+                <div class="about-section">
+                    <img src="jagnyashini.jpg" alt="Profile Image" class="profile-img" />
+                    <h2>About Me</h2>
+                    <p>
+                        I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee.
+                        I worked as a Postdoctoral Researcher at the National University of Singapore (NUS).
+                        I completed my Ph.D. as a Prime Minister's Research Fellow (PMRF) at the Indian Institute of Technology, Bhubaneswar.
+                        I have six years of work experience in the networking and telecommunication domain at the Centre for Development of Telematics (CDOT), Government of India.
+                    </p>
+                    <p>
+                        My research interests include IoT systems, network protocols, and edge computing.
+                        My work focuses on designing and developing efficient protocols for large-scale IoT systems,
+                        data collection strategies for digital twin synchronization in the Metaverse,
+                        and innovative resource allocation approaches for IoT-enabled Metaverse systems.
+                    </p>
+                </div>
+
+                <!-- News Section -->
+                <div class="news-section">
+                    <div class="news">
+                        <h3>News & Announcements</h3>
+                        <div class="news-item">
+                            <strong>[June 2025]</strong> Joined <i>IIT Roorkee</i> as Assistant Professor.
+                        </div>
+                        <div class="news-item">
+                            <strong>[Apr 2025]</strong> Paper accepted at IEEE VTC-Spring 2025.
+                        </div>
+                        <div class="news-item">
+                            <strong>[Oct 2024]</strong> Joined <i>NUS, Singapore</i> as Research Fellow.
+                        </div>
+                        <div class="news-item">
+                            <strong>[Sept 2024]</strong> Paper accepted at ACM SenSys 2024.
+                        </div>
+                        <div class="news-item">
+                            <strong>[August 2024]</strong> Joined <i>KIIT, Bhubaneswar</i> as Assistant Professor.
+                        </div>
+                        <div class="news-item">
+                            <strong>[July 2024]</strong> Defended <i>PhD Thesis</i>.
+                        </div>
+                        <div class="news-item">
+                            <strong>[Aug 2020]</strong> Selected for <i>Prime Minister Research Fellowship (PMRF, 2020)</i>.
+                        </div>
+                        <div class="news-item">
+                            <strong>[Aug 2020]</strong> Joined <i>IIT Bhubaneswar</i> as PhD Research Scholar.
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div> <!-- End flex-row -->
+        </section>
+
+        <!-- Research Section -->
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>IoT Systems Design & Protocols</li>
+                <li>Industrial Metaverse & Digital Twins</li>
+                <li>5G/6G Network Integration with IoT</li>
+                <li>Edge Computing & Resource Allocation</li>
+            </ul>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Debadarshini, J., et al. "Adaptive Concurrent-Transmission based Real-Time Data Collection in IoT," <i>IEEE IoT Journal</i>, 2024.</li>
+                <li>Debadarshini, J., et al. "Resource Allocation in IoT-assisted Industrial Metaverse," <i>Elsevier Computer Networks</i>, 2025.</li>
+            </ul>
+            <p>Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:jagnyashini@iitr.ac.in">jagnyashini@iitr.ac.in</a></p>
+            <p>Office: CSE Dept, IIT Roorkee</p>
+            <p>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </p>
+        </section>
+
+    </div> <!-- End container -->
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Dr. Jagnyashini Debadarshini | IIT Roorkee
+    </footer>
+
+    <!-- Popup Bar -->
+    <div id="popup-bar" style="
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #004080;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+        transform: translateY(100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 999;
+        font-size: 16px;
+    ">
+        <span>🌟 Connect with me: </span>
+        <div>
+            <a href="https://www.linkedin.com" target="_blank" style="color: white; margin-right: 15px; text-decoration: underline;">LinkedIn</a>
+            <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: underline;">Facebook</a>
         </div>
-
-    </section>
-
-    <section id="research">
-        <h2>Research Interests</h2>
-        <ul>
-            <li>IoT Systems Design & Protocols</li>
-            <li>Industrial Metaverse & Digital Twins</li>
-            <li>5G/6G Network Integration with IoT</li>
-            <li>Edge Computing & Resource Allocation</li>
-        </ul>
-    </section>
-
-    <section id="publications">
-        <h2>Selected Publications</h2>
-        <ul>
-            <li>Debadarshini, J., et al. "Adaptive Concurrent-Transmission based Real-Time Data Collection in IoT," <i>IEEE IoT Journal</i>, 2024.</li>
-            <li>Debadarshini, J., et al. "Resource Allocation in IoT-assisted Industrial Metaverse," <i>Elsevier Computer Networks</i>, 2025.</li>
-        </ul>
-        <p>Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:jagnyashini@iitr.ac.in">jagnyashini@iitr.ac.in</a></p>
-        <p>Office: CSE Dept, IIT Roorkee</p>
-        <p>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-            <a href="https://github.com" target="_blank">GitHub</a>
-        </p>
-    </section>
-
-</div>
-
-<footer>
-    &copy; 2025 Dr. Jagnyashini Debadarshini | IIT Roorkee
-</footer>
-
-<script>
-    function showTab(tabId) {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
-        document.getElementById(tabId).classList.add('active');
-    }
-</script>
-<!-- Add this just before </body> -->
-<div id="popup-bar" style="
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #004080;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-    transform: translateY(100%);
-    transition: transform 0.5s ease-in-out;
-    z-index: 999;
-    font-size: 16px;
-">
-    <span>🌟 Connect with me: </span>
-    <div>
-        <a href="https://www.linkedin.com" target="_blank" style="color: white; margin-right: 15px; text-decoration: underline;">LinkedIn</a>
-        <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: underline;">Facebook</a>
     </div>
-</div>
 
-<audio id="popup-sound" src="https://notificationsounds.com/storage/sounds/file-sounds-1142-pristine.mp3" preload="auto"></audio>
+    <audio id="popup-sound" src="https://notificationsounds.com/storage/sounds/file-sounds-1142-pristine.mp3" preload="auto"></audio>
 
-<script>
-    function showTab(tabId) {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            section.classList.remove('active');
+    <script>
+        // Tab switching
+        function showTab(tabId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Show popup after delay
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.getElementById('popup-bar').style.transform = 'translateY(0)';
+                document.getElementById('popup-sound').play();
+            }, 2000); // delay in ms (2 seconds)
         });
-        document.getElementById(tabId).classList.add('active');
-    }
-
-    // Show popup after delay
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            document.getElementById('popup-bar').style.transform = 'translateY(0)';
-            document.getElementById('popup-sound').play();
-        }, 2000);  // delay in ms (3 seconds)
-    });
-</script>
+    </script>
 
 </body>
-</html>  
+
+</html>

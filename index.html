@@ -220,6 +220,49 @@
         document.getElementById(tabId).classList.add('active');
     }
 </script>
+<!-- Add this just before </body> -->
+<div id="popup-bar" style="
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #004080;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 999;
+    font-size: 16px;
+">
+    <span>🌟 Connect with me: </span>
+    <div>
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; margin-right: 15px; text-decoration: underline;">LinkedIn</a>
+        <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: underline;">Facebook</a>
+    </div>
+</div>
+
+<audio id="popup-sound" src="https://notificationsounds.com/storage/sounds/file-sounds-1142-pristine.mp3" preload="auto"></audio>
+
+<script>
+    function showTab(tabId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // Show popup after delay
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            document.getElementById('popup-bar').style.transform = 'translateY(0)';
+            document.getElementById('popup-sound').play();
+        }, 3000);  // delay in ms (3 seconds)
+    });
+</script>
 
 </body>
 </html>

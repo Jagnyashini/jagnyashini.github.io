@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prof. Jagnyashini Debadarshini - Faculty Page</title>
+    <title>Dr. Jagnyashini Debadarshini | Assistant Professor | IIT Roorkee</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,30 +28,55 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            cursor: pointer;
         }
         nav a:hover {
             background-color: #0059b3;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
             background-color: white;
         }
+
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .about-section {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .news-section {
+            flex: 1;
+            min-width: 250px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateX(50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
         .profile-img {
             float: right;
             margin: 0 0 20px 20px;
             border-radius: 8px;
             max-width: 200px;
         }
+
         section {
             display: none;
         }
         section.active {
             display: block;
         }
+
         .news {
-            margin-top: 30px;
             padding: 15px;
             background-color: #e6f0ff;
             border-left: 5px solid #0059b3;
@@ -60,6 +85,7 @@
         .news-item {
             margin-bottom: 10px;
         }
+
         footer {
             background-color: #003366;
             color: white;
@@ -67,94 +93,110 @@
             padding: 10px;
             margin-top: 20px;
         }
+
+        @media (max-width: 800px) {
+            .flex-row {
+                flex-direction: column;
+            }
+            .profile-img {
+                float: none;
+                display: block;
+                margin: 0 auto 20px auto;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Dr. Jagnyashini Debadarshini</h1>
-        <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
-    </header>
+<header>
+    <h1>Dr. Jagnyashini Debadarshini</h1>
+    <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
+</header>
 
-    <nav>
-        <a href="#" onclick="showTab('about')">Home</a>
-        <a href="#" onclick="showTab('research')">Research</a>
-        <a href="#" onclick="showTab('publications')">Publications</a>
-        <a href="#" onclick="showTab('contact')">Contact</a>
-    </nav>
+<nav>
+    <a href="#" onclick="showTab('about')">Home</a>
+    <a href="#" onclick="showTab('research')">Research</a>
+    <a href="#" onclick="showTab('publications')">Publications</a>
+    <a href="#" onclick="showTab('contact')">Contact</a>
+</nav>
 
-    <div class="container">
+<div class="container">
 
-        <section id="about" class="active">
-            <img src="profile.jpg" alt="Profile Image" class="profile-img" />
-            <h2>About Me</h2>
-            <p>I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee. 
-                I worked as a Postdoctoral researcher at National University of Singapore (NUS). 
-                I have completed my Ph.D. as a Prime Minister's Research Fellow (PMRF) in the discipline of Computer Science and Engineering from  Indian Institute of Technology, Bhubaneswar. 
-                I have six years of work experience in the networking and telecommunication domain at Center For Development of Telematics (CDOT), Govt. of India.
-                My research interests include IoT systems,  network protocols, and edge computing.
-                My research primarily focuses on designing and developing efficient protocols for large-scale IoT systems. 
-                Currently, I am working on data collection strategies to facilitate digital twin synchronization in Metaverse and on crafting innovative resource allocation approaches to address the complex challenges of IoT-enabled Metaverse systems.  
+    <section id="about" class="active">
+        <div class="flex-row">
+            <div class="about-section">
+                <img src="profile.jpg" alt="Profile Image" class="profile-img" />
+                <h2>About Me</h2>
+                <p>I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee. 
+                    I worked as a Postdoctoral researcher at National University of Singapore (NUS). 
+                    I completed my Ph.D. as a Prime Minister's Research Fellow (PMRF) at Indian Institute of Technology, Bhubaneswar. 
+                    I have six years of work experience in the networking and telecommunication domain at Center For Development of Telematics (CDOT), Govt. of India.
+                    My research interests include IoT systems, network protocols, and edge computing.
+                    My work focuses on designing and developing efficient protocols for large-scale IoT systems, data collection strategies for digital twin synchronization in the Metaverse, and innovative resource allocation approaches for IoT-enabled Metaverse systems.
                 </p>
+            </div>
 
-            <div class="news">
-                <h3>News & Announcements</h3>
-                <div class="news-item">
-                    <strong>[June 2025]</strong> Delivered keynote talk at <i>International Workshop on IoT & Digital Twins</i>, NUS Singapore.
-                </div>
-                <div class="news-item">
-                    <strong>[May 2025]</strong> New paper accepted in <i>IEEE Transactions on Industrial Informatics</i>.
-                </div>
-                <div class="news-item">
-                    <strong>[April 2025]</strong> Invited to serve on Technical Program Committee (TPC) for <i>ACM IoTDI 2026</i>.
+            <div class="news-section">
+                <div class="news">
+                    <h3>News & Announcements</h3>
+                    <div class="news-item">
+                        <strong>[June 2025]</strong> Delivered keynote talk at <i>International Workshop on IoT & Digital Twins</i>, NUS Singapore.
+                    </div>
+                    <div class="news-item">
+                        <strong>[May 2025]</strong> New paper accepted in <i>IEEE Transactions on Industrial Informatics</i>.
+                    </div>
+                    <div class="news-item">
+                        <strong>[April 2025]</strong> Invited to serve on Technical Program Committee (TPC) for <i>ACM IoTDI 2026</i>.
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="research">
-            <h2>Research Interests</h2>
-            <ul>
-                <li>IoT Systems Design & Protocols</li>
-                <li>Industrial Metaverse & Digital Twins</li>
-                <li>5G/6G Network Integration with IoT</li>
-                <li>Edge Computing & Resource Allocation</li>
-            </ul>
-        </section>
+    <section id="research">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>IoT Systems Design & Protocols</li>
+            <li>Industrial Metaverse & Digital Twins</li>
+            <li>5G/6G Network Integration with IoT</li>
+            <li>Edge Computing & Resource Allocation</li>
+        </ul>
+    </section>
 
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            <ul>
-                <li>Debadarshini, J., et al. "Adaptive Concurrent-Transmission based Real-Time Data Collection in IoT," <i>IEEE IoT Journal</i>, 2024.</li>
-                <li>Debadarshini, J., et al. "Resource Allocation in IoT-assisted Industrial Metaverse," <i>Elsevier Computer Networks</i>, 2025.</li>
-            </ul>
-            <p>Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
-        </section>
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul>
+            <li>Debadarshini, J., et al. "Adaptive Concurrent-Transmission based Real-Time Data Collection in IoT," <i>IEEE IoT Journal</i>, 2024.</li>
+            <li>Debadarshini, J., et al. "Resource Allocation in IoT-assisted Industrial Metaverse," <i>Elsevier Computer Networks</i>, 2025.</li>
+        </ul>
+        <p>Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:jagnyashini@iitr.ac.in">jagnyashini@iitr.ac.in</a></p>
-            <p>Office: CSE Dept, IIT Roorkee</p>
-            <p>
-                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-                <a href="https://github.com" target="_blank">GitHub</a>
-            </p>
-        </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jagnyashini@iitr.ac.in">jagnyashini@iitr.ac.in</a></p>
+        <p>Office: CSE Dept, IIT Roorkee</p>
+        <p>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+    </section>
 
-    </div>
+</div>
 
-    <footer>
-        &copy; 2025 Dr. Jagnyashini Debadarshini | IIT Roorkee
-    </footer>
+<footer>
+    &copy; 2025 Dr. Jagnyashini Debadarshini | IIT Roorkee
+</footer>
 
-    <script>
-        function showTab(tabId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
+<script>
+    function showTab(tabId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
 
 </body>
 </html>

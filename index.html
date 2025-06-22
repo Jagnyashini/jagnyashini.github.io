@@ -188,42 +188,41 @@
 
             </div>
 
-            <!-- Row: Education + Work Experience -->
-<!-- Row: Education + Work Experience -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<!-- Row: Education + Work Experience (Card View with Hover Animation) -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">
 
-    <!-- Education -->
-    <div style="background-color: #ffffff; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #0059b3;">
+    <!-- Education Card -->
+    <div class="card">
         <h3 style="color: #003366;">🎓 Education</h3>
         <ul style="list-style-type: none; padding: 0;">
             <li style="margin-bottom: 12px;">
                 <strong>Ph.D. (PMRF)</strong><br>
                 <span style="color: #555;">Aug 2020 - Apr 2024</span><br>
-                Indian Institute of Technology (IIT), Bhubaneswar<br>
+                IIT Bhubaneswar<br>
                 <em>Computer Science and Engineering</em>
             </li>
             <li style="margin-bottom: 12px;">
                 <strong>M.Tech</strong><br>
                 <span style="color: #555;">July 2018 - May 2020</span><br>
-                Indian Institute of Technology (IIT), Bhubaneswar<br>
+                IIT Bhubaneswar<br>
                 <em>Computer Science and Engineering</em>
             </li>
             <li>
                 <strong>B.Tech</strong><br>
                 <span style="color: #555;">July 2007 - May 2011</span><br>
-                National Institute of Technology (NIT), Rourkela<br>
+                NIT Rourkela<br>
                 <em>Computer Science and Engineering</em>
             </li>
         </ul>
     </div>
 
-    <!-- Work Experience -->
-    <div style="background-color: #ffffff; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #cc6600;">
+    <!-- Work Experience Card -->
+    <div class="card">
         <h3 style="color: #663300;">🏢 Work Experience</h3>
         <ul style="list-style-type: none; padding: 0;">
             <li style="margin-bottom: 12px;">
                 <strong>Assistant Professor</strong> (Current)<br>
-                Indian Institute of Technology (IIT), Roorkee
+                IIT Roorkee
             </li>
             <li style="margin-bottom: 12px;">
                 <strong>Postdoctoral Researcher</strong><br>
@@ -233,18 +232,36 @@
             <li style="margin-bottom: 12px;">
                 <strong>Assistant Professor</strong><br>
                 <span style="color: #555;">Aug 2024 - Sep 2024</span><br>
-                KIIT, Bhubaneswar
+                KIIT Bhubaneswar
             </li>
             <li>
                 <strong>Senior Research Engineer</strong><br>
                 <span style="color: #555;">Aug 2011 - Aug 2017</span><br>
-                Centre for Development of Telematics (C-DOT), New Delhi<br>
-                <em>Government of India</em>
+                C-DOT, New Delhi (Govt. of India)
             </li>
         </ul>
     </div>
 
 </div>
+
+<!-- Card Hover Animation Styles -->
+<style>
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #0059b3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+</style>
+
 
 
 <!-- Row: Awards + Research Areas -->

@@ -112,23 +112,67 @@
 
     <!-- News Section -->
     <div style="
-        flex: 1;
-        min-width: 250px;
-        background-color: #f9f3ec;
-        padding: 15px;
-        border-left: 5px solid #0059b3;
-        border-radius: 8px;
-        max-height: 400px;
-        overflow-y: auto;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    ">
-        <h3 style="color: #003366; margin-bottom: 10px;">Latest News</h3>
-        <div class="news-item" style="margin-bottom: 10px;">[June 2025] Keynote talk at Intl Workshop on IoT & Digital Twins (NUS)</div>
-        <div class="news-item" style="margin-bottom: 10px;">[May 2025] Paper accepted in IEEE Transactions on Industrial Informatics</div>
-        <div class="news-item" style="margin-bottom: 10px;">[April 2025] TPC member at ACM IoTDI 2026</div>
-        <div class="news-item" style="margin-bottom: 10px;">[March 2025] Invited speaker at IITR Metaverse Research Symposium</div>
-        <div class="news-item" style="margin-bottom: 10px;">[Feb 2025] Guest lecture on IoT-Metaverse integration at NUS</div>
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f3ec;
+    padding: 15px;
+    border-left: 5px solid #0059b3;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInNews 2s ease-in-out;
+">
+
+    <h3 style="color: #004080; text-align: center;">News & Announcements</h3>
+
+    <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
+        <strong>[June 2025]</strong> Joined <i>IIT Roorkee</i> as Assistant Professor.
     </div>
+    <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
+        <strong>[Apr 2025]</strong> Paper accepted at IEEE VTC-Spring 2025.
+    </div>
+    <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
+        <strong>[Oct 2024]</strong> Joined <i>NUS</i> as Research Fellow.
+    </div>
+    <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
+        <strong>[Sept 2024]</strong> Paper accepted at ACM SenSys 2024.
+    </div>
+    <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
+        <strong>[August 2024]</strong> Joined <i>KIIT</i> as Assistant Professor.
+    </div>
+    <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
+        <strong>[July 2024]</strong> Defended <i>PhD Thesis</i>.
+    </div>
+    <div class="news-item" style="padding: 8px; transition: background 0.3s;">
+        <strong>[Aug 2020]</strong> Selected for <i>PMRF Scholarship</i>.
+    </div>
+    <div class="news-item" style="padding: 8px; transition: background 0.3s;">
+        <strong>[Aug 2020]</strong> Joined as a PhD Scholar at <i>IIT Bhubaneswar</i>.
+    </div>
+
+</div>
+
+<!-- Animation CSS -->
+<style>
+@keyframes fadeInNews {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover highlight effect */
+.news-item:hover {
+    background-color: #fff8e1;
+    cursor: pointer;
+}
+</style>
+
 
 </div>
 

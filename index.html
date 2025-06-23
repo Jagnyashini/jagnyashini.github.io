@@ -71,11 +71,11 @@
 </head>
 <body>
 
-    <header>
-        <h1>Prof. Jagnyashini Debadarshini</h1>
-        <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
+     <header>
+        <h1>Dr. Jagnyashini Debadarshini</h1>
+        <p>Assistant Professor | Department of Computer Science & Engineering | IIT Roorkee</p>
     </header>
-
+    
     <nav>
         <a href="#" onclick="showTab('about')">Home</a>
         <a href="#" onclick="showTab('research')">Research</a>
@@ -85,24 +85,156 @@
 
     <div class="container">
 
-        <section id="about" class="active">
-            <img src="profile.jpg" alt="Profile Image" class="profile-img" />
-            <h2>About Me</h2>
-            <p>I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee. My research interests include IoT systems, industrial metaverse, network protocols, and edge computing.</p>
+       <section id="about" class="active">
 
-            <div class="news">
-                <h3>News & Announcements</h3>
-                <div class="news-item">
-                    <strong>[June 2025]</strong> Delivered keynote talk at <i>International Workshop on IoT & Digital Twins</i>, NUS Singapore.
-                </div>
-                <div class="news-item">
-                    <strong>[May 2025]</strong> New paper accepted in <i>IEEE Transactions on Industrial Informatics</i>.
-                </div>
-                <div class="news-item">
-                    <strong>[April 2025]</strong> Invited to serve on Technical Program Committee (TPC) for <i>ACM IoTDI 2026</i>.
+            <!-- Row 1: About Me + News (merged row) -->
+            <div style="
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #f0f8ff;
+                padding: 20px;
+                gap: 20px;
+                margin-bottom: 10px;
+            ">
+                <!-- About Me -->
+                <div style="flex: 2; min-width: 300px;">
+                    <img src="jagnyashini.jpg" alt="Profile Image" class="profile-img" />
+                    <h2>About Me</h2>
+                    <p>
+                        I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee.
+                        I worked as a Postdoctoral Researcher at the National University of Singapore (NUS).
+                        I completed my Ph.D. as a PMRF Fellow at IIT Bhubaneswar and worked at C-DOT, Govt. of India.
+                    </p>
+                    <p>
+                        My research includes IoT systems, network protocols, and edge computing. I focus on designing efficient protocols
+                        for large-scale IoT, data collection for digital twins in the Metaverse, and resource allocation in IoT-Metaverse systems.
+                    </p>
                 </div>
             </div>
-        </section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">
+
+    <!-- Education Card -->
+    <div class="card">
+        <h3 style="color: #004080;">🎓 Education</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+                <strong>Ph.D. (PMRF)</strong><br>
+                <span style="color: #555;">Aug 2020 - Apr 2024</span><br>
+                IIT Bhubaneswar<br>
+                <em>Computer Science and Engineering</em>
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>M.Tech</strong><br>
+                <span style="color: #555;">July 2018 - May 2020</span><br>
+                IIT Bhubaneswar<br>
+                <em>Computer Science and Engineering</em>
+            </li>
+            <li>
+                <strong>B.Tech</strong><br>
+                <span style="color: #555;">July 2007 - May 2011</span><br>
+                NIT Rourkela<br>
+                <em>Computer Science and Engineering</em>
+            </li>
+        </ul>
+    </div>
+    <!-- Work Experience Card -->
+    <div class="card">
+        <h3 style="color: #004080;">🏢 Work Experience</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+                <strong>Assistant Professor</strong> (Current)<br>
+                IIT Roorkee
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Postdoctoral Researcher</strong><br>
+                <span style="color: #555;">Oct 2024 - May 2025</span><br>
+                National University of Singapore
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Assistant Professor</strong><br>
+                <span style="color: #555;">Aug 2024 - Sep 2024</span><br>
+                KIIT Bhubaneswar
+            </li>
+            <li>
+                <strong>Senior Research Engineer</strong><br>
+                <span style="color: #555;">Aug 2011 - Aug 2017</span><br>
+                C-DOT, New Delhi (Govt. of India)
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Card Hover Animation Styles -->
+<style>
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #0059b3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+</style>
+
+
+
+<!-- Row: Awards + Research Areas (Card View with Hover Animation) -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">
+
+    <!-- Awards Card -->
+   <!-- Awards Card -->
+<div class="card">
+    <h3 style="color: #004080;">🏆 Awards & Fellowships</h3>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 12px;">
+            PMRF Travel Grant — ICCCN 2023, Honolulu, USA
+        </li>
+        <li style="margin-bottom: 12px;">
+            PMRF Travel Grant — IEEE GLOBECOM 2023, Kuala Lumpur, Malaysia
+        </li>
+        <li style="margin-bottom: 12px;">
+            Prime Minister Research Fellowship (PMRF), Govt. of India (2020–2024), IIT Bhubaneswar
+        </li>
+        <li style="margin-bottom: 12px;">
+            MHRD Scholarship (2018–2020), IIT Bhubaneswar
+        </li>
+        <li style="margin-bottom: 12px;">
+            Ranked 2nd in M.Tech, CSE Dept, IIT Bhubaneswar (2020)
+        </li>
+        <li style="margin-bottom: 12px;">
+            Best Employee Award, C-DOT, Govt. of India (2016)
+        </li>
+        <li>
+            GATE 2014: 99.65 Percentile (Score 726)
+        </li>
+    </ul>
+</div>
+
+
+    <!-- Research Areas Card -->
+    <div class="card">
+        <h3 style="color: #004080;">🔬 Professional Services</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+                Reviewer in IEEE Transactions on Network and Service Management
+            </li>
+            <li style="margin-bottom: 12px;">
+                Reviewer in IEEE Transactions on Sensor Networks
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+</section>
 
         <section id="research">
             <h2>Research Interests</h2>

@@ -143,10 +143,22 @@
 <!-- Font Awesome CDN (add in <head> if not already included) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Heading with animated rolling icon -->
-<h3 style="color: #004080; text-align: center;">
-    <i class="fas fa-cog" style="margin-right: 8px; color: #ff6600; animation: spin 1.5s linear infinite;"></i> Updates
-</h3>
+<!-- Updates Heading in top-right corner -->
+<div style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f0f8ff;
+    color: #004080;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 9999;
+">
+    <i class="fas fa-circle-notch" style="margin-right: 8px; color: #ff6600; animation: spin 1.5s linear infinite;"></i> Updates
+</div>
 
 <!-- CSS for rotation -->
 <style>
@@ -155,6 +167,7 @@
     100% { transform: rotate(360deg); }
 }
 </style>
+
                    
     <div class="news-item" style="padding: 8px; border-bottom: 1px dashed #ccc; transition: background 0.3s;">
         <strong>[June 2025]</strong> Joined <i>IIT Roorkee</i> as Assistant Professor.

@@ -449,33 +449,45 @@ function sortPublications(listId, selectId) {
         z-index: 999;
         font-size: 16px;
     ">
-        <span>🌟 Connect with me: </span>
-        <div>
-            <a href="https://www.linkedin.com" target="_blank" style="color: white; margin-right: 15px; text-decoration: underline;">LinkedIn</a>
-            <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: underline;">Facebook</a>
-        </div>
+       <!-- CONNECT BOX -->
+<div id="connectBox" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 9999;
+    font-size: 14px;
+    width: 180px;
+">
+    <span style="font-weight: bold;">🌟 Connect with me</span>
+    <div style="margin-top: 8px;">
+        <a href="https://www.linkedin.com" target="_blank" style="color: white; text-decoration: underline; display: block; margin-bottom: 5px;">LinkedIn</a>
+        <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: underline;">Facebook</a>
     </div>
+</div>
 
-    <audio id="popup-sound" src="https://notificationsounds.com/storage/sounds/file-sounds-1142-pristine.mp3" preload="auto"></audio>
+<!-- SOUND -->
+<audio id="popup-sound" src="https://notificationsounds.com/storage/sounds/file-sounds-1142-pristine.mp3" preload="auto"></audio>
 
-    <script>
-        // Tab switching
-        function showTab(tabId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
+<!-- SCRIPT TO POPUP ON SCROLL -->
+<script>
+    let popupShown = false;
+    window.addEventListener('scroll', () => {
+        if (!popupShown && window.scrollY > 200) {
+            const box = document.getElementById('connectBox');
+            const sound = document.getElementById('popup-sound');
+            box.style.display = 'block';
+            sound.play();
+            popupShown = true;
         }
+    });
+</script>
 
-        // Show popup after delay
-        window.addEventListener('load', function () {
-            setTimeout(() => {
-                document.getElementById('popup-bar').style.transform = 'translateY(0)';
-                document.getElementById('popup-sound').play();
-            }, 2000);
-        });
-    </script>
 
 </body>
 

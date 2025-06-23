@@ -320,97 +320,80 @@
 <section id="publications">
     <h2>📚 Publications</h2>
 
-    <!-- Sort Controls -->
+    <!-- Conference Publications -->
+    <h3>🎤 Conference Publications</h3>
+
+    <!-- Sort Controls for Conferences -->
     <div style="margin-bottom: 10px;">
-        <label for="sortSelect"><strong>Sort by:</strong></label>
-        <select id="sortSelect" onchange="sortPublications()" style="padding: 5px; margin-left: 10px;">
+        <label for="sortConferences"><strong>Sort by:</strong></label>
+        <select id="sortConferences" onchange="sortPublications('confList', 'sortConferences')" style="padding: 5px; margin-left: 10px;">
             <option value="yearDesc">Year (Newest First)</option>
             <option value="yearAsc">Year (Oldest First)</option>
-            <option value="type">Type (Journal → Conference)</option>
         </select>
     </div>
 
-    <!-- Publications List -->
-    <ul id="pubList" style="list-style-type: none; padding-left: 0; line-height: 1.6;">
-        <!-- Conference Publications -->
-        <li data-year="2025" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2025</span> TurTle: Topological Structure Formation in Internet-of-Things in Real-Time. Jagnyashini Debadarshini, Sudipta Saha, Mohan Gurusamy. <em>IEEE VTC Spring 2025</em>, Oslo, Norway. </li>
-        
-        <li data-year="2024" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2024</span> BLE-based Many-to-Many Data-Sharing for IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE COMSNETS 2024</em>, Bengaluru, India. </li>
-        
-        <li data-year="2024" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2024</span> Divide-and-Conquer for IoT: Discrete vs Continuous Groups. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE COMSNETS 2024</em>, Bengaluru, India. </li>
-        
-        <li data-year="2024" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2024</span> Efficient Coordination in IoT through Fast Many-to-Many Conveyance of Bulk-data. Anwesha Patel, Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE APCC 2024</em>, Indonesia. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> SyncCast: Real-Time Self-Adaptive and Fault-Tolerant All-to-All Data-Sharing in IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICNP 2023</em>, Reykjavik, Iceland. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> An IoT-Assisted Efficient Framework for Multi-Drone Conveyance System. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE GLOBECOM 2023</em>, Kuala Lumpur, Malaysia. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> LiteCast: Fast and Uniform Local Data-Sharing in Large Dynamic Networks. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICCCN 2023</em>, Honolulu, HI, USA. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> Decentralized Load Management in HAN: An IoT-Assisted Approach. Jagnyashini Debadarshini, Sudipta Saha, Subhransu Ranjan Samantaray. <em>IEEE SmartGridComm 2023</em>, Singapore. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> iCharge: An IoT-Assisted Framework for Efficient Charging of EVs. Jagnyashini Debadarshini, Megha Vardhan Rejeti, Sudipta Saha, Chandrashekhar Narayan Bhende. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> ZoneSync: Real-Time Identification of Zones in IoT-Edge. Manish Kaushik, Jagnyashini Debadarshini, Himanshu Goyal, Sudipta Saha. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. </li>
-        
-        <li data-year="2023" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> A Lightweight IoT-Based Framework for VANET. Chandra Shekhar, Jagnyashini Debadarshini, Puneet Kumar Sing, Sudipta Saha. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. </li>
-        
-        <li data-year="2022" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Simultaneous Intra-Group Communication: Understanding the Problem Space. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE INFOCOM 2022</em>, London. </li>
-        
-        <li data-year="2022" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Efficient Coordination among Electrical Vehicles: An IoT-Assisted Approach. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE INFOCOM 2022</em>, London. </li>
-        
-        <li data-year="2022" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Collaborative Load Management in Smart Home Area Network. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICDCS 2022</em>, Bologna, Italy. </li>
-        
-        <li data-year="2022" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Divide, Conquer and Merge for IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE DCOSS 2022</em>, Marina Del Rey, LA, USA. </li>
-        
-        <li data-year="2020" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2020</span> Start of Frame Delimiters (SFDs) for Simultaneous Intra-Group One-to-All Dissemination. Jagnyashini Debadarshini, Sudipta Saha, Olaf Landsiedel, Mun Chun Chan. <em>IEEE LCN 2020</em>, Sydney, Australia. </li>
-        
-        <li data-year="2020" data-type="conference"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2020</span> Fine-grained Frequencies for Simultaneous Intra-Group One-to-All Dissemination. Jagnyashini Debadarshini, Chandra Shekhar, Sudipta Saha. <em>IEEE MASS 2020</em>, Delhi NCR, India. </li>
+    <!-- Conference List -->
+    <ul id="confList" style="list-style-type: none; padding-left: 0; line-height: 1.6;">
+        <li data-year="2025"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2025</span> TurTle: Topological Structure Formation in Internet-of-Things in Real-Time. Jagnyashini Debadarshini, Sudipta Saha, Mohan Gurusamy. <em>IEEE VTC Spring 2025</em>, Oslo, Norway. </li>
+        <li data-year="2024"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2024</span> BLE-based Many-to-Many Data-Sharing for IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE COMSNETS 2024</em>, Bengaluru, India. </li>
+        <li data-year="2024"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2024</span> Divide-and-Conquer for IoT: Discrete vs Continuous Groups. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE COMSNETS 2024</em>, Bengaluru, India. </li>
+        <li data-year="2024"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2024</span> Efficient Coordination in IoT through Fast Many-to-Many Conveyance of Bulk-data. Anwesha Patel, Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE APCC 2024</em>, Indonesia. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> SyncCast: Real-Time Self-Adaptive and Fault-Tolerant All-to-All Data-Sharing in IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICNP 2023</em>, Reykjavik, Iceland. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> An IoT-Assisted Efficient Framework for Multi-Drone Conveyance System. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE GLOBECOM 2023</em>, Kuala Lumpur, Malaysia. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> LiteCast: Fast and Uniform Local Data-Sharing in Large Dynamic Networks. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICCCN 2023</em>, Honolulu, HI, USA. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> Decentralized Load Management in HAN: An IoT-Assisted Approach. Jagnyashini Debadarshini, Sudipta Saha, Subhransu Ranjan Samantaray. <em>IEEE SmartGridComm 2023</em>, Singapore. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> iCharge: An IoT-Assisted Framework for Efficient Charging of EVs. Jagnyashini Debadarshini, Megha Vardhan Rejeti, Sudipta Saha, Chandrashekhar Narayan Bhende. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> ZoneSync: Real-Time Identification of Zones in IoT-Edge. Manish Kaushik, Jagnyashini Debadarshini, Himanshu Goyal, Sudipta Saha. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. </li>
+        <li data-year="2023"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2023</span> A Lightweight IoT-Based Framework for VANET. Chandra Shekhar, Jagnyashini Debadarshini, Puneet Kumar Sing, Sudipta Saha. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. </li>
+        <li data-year="2022"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Simultaneous Intra-Group Communication: Understanding the Problem Space. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE INFOCOM 2022</em>, London. </li>
+        <li data-year="2022"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Efficient Coordination among Electrical Vehicles: An IoT-Assisted Approach. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE INFOCOM 2022</em>, London. </li>
+        <li data-year="2022"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Collaborative Load Management in Smart Home Area Network. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICDCS 2022</em>, Bologna, Italy. </li>
+        <li data-year="2022"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2022</span> Divide, Conquer and Merge for IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE DCOSS 2022</em>, Marina Del Rey, LA, USA. </li>
+        <li data-year="2020"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2020</span> Start of Frame Delimiters (SFDs) for Simultaneous Intra-Group One-to-All Dissemination. Jagnyashini Debadarshini, Sudipta Saha, Olaf Landsiedel, Mun Chun Chan. <em>IEEE LCN 2020</em>, Sydney, Australia. </li>
+        <li data-year="2020"> <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;">2020</span> Fine-grained Frequencies for Simultaneous Intra-Group One-to-All Dissemination. Jagnyashini Debadarshini, Chandra Shekhar, Sudipta Saha. <em>IEEE MASS 2020</em>, Delhi NCR, India. </li>
+    </ul>
 
-        <!-- Journal Publications -->
-        <li data-year="2024" data-type="journal"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2024</span> Structure-Adaptive Many-to-Many Data-Sharing for IoT. Jagnyashini Debadarshini, Manish Kaushik, Sudipta Saha. <em>IEEE Transactions on Network and Service Management (TNSM), 2024</em>. Impact Factor ≈ 5.3 </li>
-        
-        <li data-year="2024" data-type="journal"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2024</span> LiVeR: Lightweight Vehicle Detection and Classification in Real-Time. Chandra Shekhar, Jagnyashini Debadarshini, Sudipta Saha. <em>ACM Transactions on Internet of Things (TIOT), 2024</em>. Impact Factor: Not available </li>
-        
-        <li data-year="2023" data-type="journal"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2023</span> TimeCast: Real-Time Many-to-Many Data-Sharing in Low-Power Wireless Distributed Systems. Jagnyashini Debadarshini, Madhav Tummala, Sudipta Saha, Olaf Landsiedel, Mun Choon Chan. <em>IEEE Systems Journal, 2023</em>. Impact Factor ≈ 4.4 </li>
-        
-        <li data-year="2023" data-type="journal"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2023</span> iCoord: Efficient Charging of EVs through IoT-Assisted Coordination. Jagnyashini Debadarshini, Megha Vardhan Rejeti, Sudipta Saha, Chandrashekhar Narayan Bhende. <em>Elsevier Ad Hoc Networks, 2023</em>. Impact Factor ≈ 3.0 </li>
-        
-        <li data-year="2023" data-type="journal"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2023</span> Fine-Grained Frequencies Meet Synchronous Transmission. Jagnyashini Debadarshini, Sudipta Saha. <em>Elsevier Computer and Communications Networks, 2023</em>. Impact Factor ≈ 2.5 </li>
+    <!-- Journal Publications -->
+    <h3>📄 Journal Publications</h3>
+
+    <!-- Sort Controls for Journals -->
+    <div style="margin-bottom: 10px;">
+        <label for="sortJournals"><strong>Sort by:</strong></label>
+        <select id="sortJournals" onchange="sortPublications('journalList', 'sortJournals')" style="padding: 5px; margin-left: 10px;">
+            <option value="yearDesc">Year (Newest First)</option>
+            <option value="yearAsc">Year (Oldest First)</option>
+        </select>
+    </div>
+
+    <!-- Journal List -->
+    <ul id="journalList" style="list-style-type: none; padding-left: 0; line-height: 1.6;">
+        <li data-year="2024"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2024</span> Structure-Adaptive Many-to-Many Data-Sharing for IoT. Jagnyashini Debadarshini, Manish Kaushik, Sudipta Saha. <em>IEEE Transactions on Network and Service Management (TNSM), 2024</em>. Impact Factor ≈ 5.3 </li>
+        <li data-year="2024"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2024</span> LiVeR: Lightweight Vehicle Detection and Classification in Real-Time. Chandra Shekhar, Jagnyashini Debadarshini, Sudipta Saha. <em>ACM Transactions on Internet of Things (TIOT), 2024</em>. Impact Factor: Not available </li>
+        <li data-year="2023"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2023</span> TimeCast: Real-Time Many-to-Many Data-Sharing in Low-Power Wireless Distributed Systems. Jagnyashini Debadarshini, Madhav Tummala, Sudipta Saha, Olaf Landsiedel, Mun Choon Chan. <em>IEEE Systems Journal, 2023</em>. Impact Factor ≈ 4.4 </li>
+        <li data-year="2023"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2023</span> iCoord: Efficient Charging of EVs through IoT-Assisted Coordination. Jagnyashini Debadarshini, Megha Vardhan Rejeti, Sudipta Saha, Chandrashekhar Narayan Bhende. <em>Elsevier Ad Hoc Networks, 2023</em>. Impact Factor ≈ 3.0 </li>
+        <li data-year="2023"> <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;">2023</span> Fine-Grained Frequencies Meet Synchronous Transmission. Jagnyashini Debadarshini, Sudipta Saha. <em>Elsevier Computer and Communications Networks, 2023</em>. Impact Factor ≈ 2.5 </li>
     </ul>
 </section>
 
 <script>
-function sortPublications() {
-    const list = document.getElementById('pubList');
+function sortPublications(listId, selectId) {
+    const list = document.getElementById(listId);
     const items = Array.from(list.getElementsByTagName('li'));
-    const sortBy = document.getElementById('sortSelect').value;
+    const sortBy = document.getElementById(selectId).value;
 
     items.sort((a, b) => {
         const yearA = parseInt(a.getAttribute('data-year'));
         const yearB = parseInt(b.getAttribute('data-year'));
-        const typeA = a.getAttribute('data-type');
-        const typeB = b.getAttribute('data-type');
-
         if (sortBy === 'yearDesc') {
             return yearB - yearA;
-        } else if (sortBy === 'yearAsc') {
+        } else {
             return yearA - yearB;
-        } else if (sortBy === 'type') {
-            if (typeA === typeB) {
-                return yearB - yearA; // sort year DESC within type
-            } else {
-                return (typeA === 'journal') ? -1 : 1;
-            }
         }
     });
 
-    // Re-attach sorted items
     items.forEach(item => list.appendChild(item));
 }
 </script>
-
-
 
 
 

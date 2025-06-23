@@ -88,29 +88,72 @@
        <section id="about" class="active">
 
             <!-- Row 1: About Me + News (merged row) -->
-            <div style="
-                display: flex;
-                flex-wrap: wrap;
-                background-color: #f0f8ff;
-                padding: 20px;
-                gap: 20px;
-                margin-bottom: 10px;
-            ">
-                <!-- About Me -->
-                <div style="flex: 2; min-width: 300px;">
-                    <img src="jagnyashini.jpg" alt="Profile Image" class="profile-img" />
-                    <h2>About Me</h2>
-                    <p>
-                        I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee.
-                        I worked as a Postdoctoral Researcher at the National University of Singapore (NUS).
-                        I completed my Ph.D. as a PMRF Fellow at IIT Bhubaneswar and worked at C-DOT, Govt. of India.
-                    </p>
-                    <p>
-                        My research includes IoT systems, network protocols, and edge computing. I focus on designing efficient protocols
-                        for large-scale IoT, data collection for digital twins in the Metaverse, and resource allocation in IoT-Metaverse systems.
-                    </p>
-                </div>
-            </div>
+           <div style="
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f8ff;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 10px;
+">
+
+    <!-- About Me -->
+    <div style="flex: 2; min-width: 300px;">
+        <img src="jagnyashini.jpg" alt="Profile Image" class="profile-img" style="max-width: 100%; border-radius: 8px;" />
+        <h2>About Me</h2>
+        <p>
+            I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee.
+            I worked as a Postdoctoral Researcher at the National University of Singapore (NUS).
+            I completed my Ph.D. as a PMRF Fellow at IIT Bhubaneswar and worked at C-DOT, Govt. of India.
+        </p>
+        <p>
+            My research includes IoT systems, network protocols, and edge computing. I focus on designing efficient protocols
+            for large-scale IoT, data collection for digital twins in the Metaverse, and resource allocation in IoT-Metaverse systems.
+        </p>
+    </div>
+
+    <!-- News Section -->
+    <div style="
+        flex: 1;
+        min-width: 250px;
+        background-color: #f9f3ec;
+        padding: 15px;
+        border-left: 5px solid #0059b3;
+        border-radius: 8px;
+        max-height: 350px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    ">
+        <h3 style="color: #003366; margin-bottom: 10px;">Latest News</h3>
+        <div style="
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            animation: scrollNews 12s linear infinite;
+        ">
+            <div class="news-item">[June 2025] Keynote talk at Intl Workshop on IoT & Digital Twins (NUS)</div>
+            <div class="news-item">[May 2025] Paper accepted in IEEE Transactions on Industrial Informatics</div>
+            <div class="news-item">[April 2025] TPC member at ACM IoTDI 2026</div>
+            <div class="news-item">[March 2025] Invited speaker at IITR Metaverse Research Symposium</div>
+            <div class="news-item">[Feb 2025] Guest lecture on IoT-Metaverse integration at NUS</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Add animation CSS -->
+<style>
+    @keyframes scrollNews {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+</style>
+
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">
 

@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr. Jagnyashini Debadarshini | Assistant Professor | IIT Roorkee</title>
-
+    <title>Prof. Jagnyashini Debadarshini - Faculty Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,55 +11,55 @@
             margin: 0;
             padding: 0;
         }
-
         header {
             background-color: #003366;
             color: white;
             padding: 20px;
             text-align: center;
         }
-
         nav {
             display: flex;
             justify-content: center;
             background-color: #004080;
         }
-
         nav a {
             padding: 14px 20px;
             display: block;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
         }
-
         nav a:hover {
             background-color: #0059b3;
         }
-
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
             background-color: white;
         }
-
-        section {
-            display: none;
-        }
-
-        section.active {
-            display: block;
-        }
-
         .profile-img {
             float: right;
             margin: 0 0 20px 20px;
             border-radius: 8px;
             max-width: 200px;
         }
-
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .news {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e6f0ff;
+            border-left: 5px solid #0059b3;
+            border-radius: 6px;
+        }
+        .news-item {
+            margin-bottom: 10px;
+        }
         footer {
             background-color: #003366;
             color: white;
@@ -69,26 +67,13 @@
             padding: 10px;
             margin-top: 20px;
         }
-
-        @media (max-width: 800px) {
-            .flex-row {
-                flex-direction: column;
-            }
-
-            .profile-img {
-                float: none;
-                display: block;
-                margin: 0 auto 20px auto;
-            }
-        }
     </style>
 </head>
-
 <body>
 
     <header>
-        <h1>Dr. Jagnyashini Debadarshini</h1>
-        <p>Assistant Professor | Department of Computer Science & Engineering | IIT Roorkee</p>
+        <h1>Prof. Jagnyashini Debadarshini</h1>
+        <p>Assistant Professor | IoT Systems & Networking | IIT Roorkee</p>
     </header>
 
     <nav>
@@ -100,245 +85,25 @@
 
     <div class="container">
 
-        <!-- About Section -->
-    <section id="about" class="active">
+        <section id="about" class="active">
+            <img src="profile.jpg" alt="Profile Image" class="profile-img" />
+            <h2>About Me</h2>
+            <p>I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee. My research interests include IoT systems, industrial metaverse, network protocols, and edge computing.</p>
 
-            <!-- Row 1: About Me + News (merged row) -->
-            <div style="
-                display: flex;
-                flex-wrap: wrap;
-                background-color: #f0f8ff;
-                padding: 20px;
-                gap: 20px;
-                margin-bottom: 10px;
-            ">
-                <!-- About Me -->
-                <div style="flex: 2; min-width: 300px;">
-                    <img src="jagnyashini.jpg" alt="Profile Image" class="profile-img" />
-                    <h2>About Me</h2>
-                    <p>
-                        I am an Assistant Professor in the Department of Computer Science & Engineering at IIT Roorkee.
-                        I worked as a Postdoctoral Researcher at the National University of Singapore (NUS).
-                        I completed my Ph.D. as a PMRF Fellow at IIT Bhubaneswar and worked at C-DOT, Govt. of India.
-                    </p>
-                    <p>
-                        My research includes IoT systems, network protocols, and edge computing. I focus on designing efficient protocols
-                        for large-scale IoT, data collection for digital twins in the Metaverse, and resource allocation in IoT-Metaverse systems.
-                    </p>
+            <div class="news">
+                <h3>News & Announcements</h3>
+                <div class="news-item">
+                    <strong>[June 2025]</strong> Delivered keynote talk at <i>International Workshop on IoT & Digital Twins</i>, NUS Singapore.
+                </div>
+                <div class="news-item">
+                    <strong>[May 2025]</strong> New paper accepted in <i>IEEE Transactions on Industrial Informatics</i>.
+                </div>
+                <div class="news-item">
+                    <strong>[April 2025]</strong> Invited to serve on Technical Program Committee (TPC) for <i>ACM IoTDI 2026</i>.
                 </div>
             </div>
+        </section>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">
-
-    <!-- Education Card -->
-    <div class="card">
-        <h3 style="color: #004080;">🎓 Education</h3>
-        <ul style="list-style-type: none; padding: 0;">
-            <li style="margin-bottom: 12px;">
-                <strong>Ph.D. (PMRF)</strong><br>
-                <span style="color: #555;">Aug 2020 - Apr 2024</span><br>
-                IIT Bhubaneswar<br>
-                <em>Computer Science and Engineering</em>
-            </li>
-            <li style="margin-bottom: 12px;">
-                <strong>M.Tech</strong><br>
-                <span style="color: #555;">July 2018 - May 2020</span><br>
-                IIT Bhubaneswar<br>
-                <em>Computer Science and Engineering</em>
-            </li>
-            <li>
-                <strong>B.Tech</strong><br>
-                <span style="color: #555;">July 2007 - May 2011</span><br>
-                NIT Rourkela<br>
-                <em>Computer Science and Engineering</em>
-            </li>
-        </ul>
-    </div>
-    <!-- Work Experience Card -->
-    <div class="card">
-        <h3 style="color: #004080;">🏢 Work Experience</h3>
-        <ul style="list-style-type: none; padding: 0;">
-            <li style="margin-bottom: 12px;">
-                <strong>Assistant Professor</strong> (Current)<br>
-                IIT Roorkee
-            </li>
-            <li style="margin-bottom: 12px;">
-                <strong>Postdoctoral Researcher</strong><br>
-                <span style="color: #555;">Oct 2024 - May 2025</span><br>
-                National University of Singapore
-            </li>
-            <li style="margin-bottom: 12px;">
-                <strong>Assistant Professor</strong><br>
-                <span style="color: #555;">Aug 2024 - Sep 2024</span><br>
-                KIIT Bhubaneswar
-            </li>
-            <li>
-                <strong>Senior Research Engineer</strong><br>
-                <span style="color: #555;">Aug 2011 - Aug 2017</span><br>
-                C-DOT, New Delhi (Govt. of India)
-            </li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- Card Hover Animation Styles -->
-<style>
-.card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid #0059b3;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-</style>
-
-
-
-<!-- Row: Awards + Research Areas (Card View with Hover Animation) -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">
-
-    <!-- Awards Card -->
-   <!-- Awards Card -->
-<div class="card">
-    <h3 style="color: #004080;">🏆 Awards & Fellowships</h3>
-    <ul style="list-style-type: none; padding: 0;">
-        <li style="margin-bottom: 12px;">
-            PMRF Travel Grant — ICCCN 2023, Honolulu, USA
-        </li>
-        <li style="margin-bottom: 12px;">
-            PMRF Travel Grant — IEEE GLOBECOM 2023, Kuala Lumpur, Malaysia
-        </li>
-        <li style="margin-bottom: 12px;">
-            Prime Minister Research Fellowship (PMRF), Govt. of India (2020–2024), IIT Bhubaneswar
-        </li>
-        <li style="margin-bottom: 12px;">
-            MHRD Scholarship (2018–2020), IIT Bhubaneswar
-        </li>
-        <li style="margin-bottom: 12px;">
-            Ranked 2nd in M.Tech, CSE Dept, IIT Bhubaneswar (2020)
-        </li>
-        <li style="margin-bottom: 12px;">
-            Best Employee Award, C-DOT, Govt. of India (2016)
-        </li>
-        <li>
-            GATE 2014: 99.65 Percentile (Score 726)
-        </li>
-    </ul>
-</div>
-
-
-    <!-- Research Areas Card -->
-    <div class="card">
-        <h3 style="color: #004080;">🔬 Professional Services</h3>
-        <ul style="list-style-type: none; padding: 0;">
-            <li style="margin-bottom: 12px;">
-                Reviewer in IEEE Transactions on Network and Service Management
-            </li>
-            <li style="margin-bottom: 12px;">
-                Reviewer in IEEE Transactions on Sensor Networks
-            </li>
-            
-        </ul>
-    </div>
-
-</div>
-</section>
-
-
-
-
-<section id="publications">
-    <h2>📚 Publications</h2>
-
-    <!-- Conference Publications -->
-    <h3>🎤 Conference Publications</h3>
-
-    <!-- Sort Controls for Conferences -->
-    <div style="margin-bottom: 10px;">
-        <label for="sortConferences"><strong>Sort by:</strong></label>
-        <select id="sortConferences" onchange="sortPublications('confList', 'sortConferences')" style="padding: 5px; margin-left: 10px;">
-            <option value="yearDesc">Year (Newest First)</option>
-            <option value="yearAsc">Year (Oldest First)</option>
-        </select>
-    </div>
-
-    <!-- Conference List -->
-    <ul id="confList" style="list-style-type: none; padding-left: 0; line-height: 1.6;">
-        <li data-year="2025"><strong>1.</strong> TurTle: Topological Structure Formation in Internet-of-Things in Real-Time. Jagnyashini Debadarshini, Sudipta Saha, Mohan Gurusamy. <em>IEEE VTC Spring 2025</em>, Oslo, Norway. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2025</span></li>
-        <li data-year="2024"><strong>2.</strong> BLE-based Many-to-Many Data-Sharing for IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE COMSNETS 2024</em>, Bengaluru, India. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2024</span></li>
-        <li data-year="2024"><strong>3.</strong> Divide-and-Conquer for IoT: Discrete vs Continuous Groups. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE COMSNETS 2024</em>, Bengaluru, India. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2024</span></li>
-        <li data-year="2024"><strong>4.</strong> Efficient Coordination in IoT through Fast Many-to-Many Conveyance of Bulk-data. Anwesha Patel, Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE APCC 2024</em>, Indonesia. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2024</span></li>
-        <li data-year="2023"><strong>5.</strong> SyncCast: Real-Time Self-Adaptive and Fault-Tolerant All-to-All Data-Sharing in IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICNP 2023</em>, Reykjavik, Iceland. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>6.</strong> An IoT-Assisted Efficient Framework for Multi-Drone Conveyance System. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE GLOBECOM 2023</em>, Kuala Lumpur, Malaysia. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>7.</strong> LiteCast: Fast and Uniform Local Data-Sharing in Large Dynamic Networks. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICCCN 2023</em>, Honolulu, HI, USA. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>8.</strong> Decentralized Load Management in HAN: An IoT-Assisted Approach. Jagnyashini Debadarshini, Sudipta Saha, Subhransu Ranjan Samantaray. <em>IEEE SmartGridComm 2023</em>, Singapore. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>9.</strong> iCharge: An IoT-Assisted Framework for Efficient Charging of EVs. Jagnyashini Debadarshini, Megha Vardhan Rejeti, Sudipta Saha, Chandrashekhar Narayan Bhende. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>10.</strong> ZoneSync: Real-Time Identification of Zones in IoT-Edge. Manish Kaushik, Jagnyashini Debadarshini, Himanshu Goyal, Sudipta Saha. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>11.</strong> A Lightweight IoT-Based Framework for VANET. Chandra Shekhar, Jagnyashini Debadarshini, Puneet Kumar Sing, Sudipta Saha. <em>IEEE COMSNETS 2023</em>, Bengaluru, India. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2022"><strong>12.</strong> Simultaneous Intra-Group Communication: Understanding the Problem Space. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE INFOCOM 2022</em>, London. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2022</span></li>
-        <li data-year="2022"><strong>13.</strong> Efficient Coordination among Electrical Vehicles: An IoT-Assisted Approach. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE INFOCOM 2022</em>, London. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2022</span></li>
-        <li data-year="2022"><strong>14.</strong> Collaborative Load Management in Smart Home Area Network. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE ICDCS 2022</em>, Bologna, Italy. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2022</span></li>
-        <li data-year="2022"><strong>15.</strong> Divide, Conquer and Merge for IoT. Jagnyashini Debadarshini, Sudipta Saha. <em>IEEE DCOSS 2022</em>, Marina Del Rey, LA, USA. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2022</span></li>
-        <li data-year="2020"><strong>16.</strong> Start of Frame Delimiters (SFDs) for Simultaneous Intra-Group One-to-All Dissemination. Jagnyashini Debadarshini, Sudipta Saha, Olaf Landsiedel, Mun Chun Chan. <em>IEEE LCN 2020</em>, Sydney, Australia. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2020</span></li>
-        <li data-year="2020"><strong>17.</strong> Fine-grained Frequencies for Simultaneous Intra-Group One-to-All Dissemination. Jagnyashini Debadarshini, Chandra Shekhar, Sudipta Saha. <em>IEEE MASS 2020</em>, Delhi NCR, India. <span style="background-color:#007bff;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2020</span></li>
-    </ul>
-
-    <!-- Journal Publications -->
-    <h3>📄 Journal Publications</h3>
-
-    <!-- Sort Controls for Journals -->
-    <div style="margin-bottom: 10px;">
-        <label for="sortJournals"><strong>Sort by:</strong></label>
-        <select id="sortJournals" onchange="sortPublications('journalList', 'sortJournals')" style="padding: 5px; margin-left: 10px;">
-            <option value="yearDesc">Year (Newest First)</option>
-            <option value="yearAsc">Year (Oldest First)</option>
-        </select>
-    </div>
-
-    <!-- Journal List -->
-    <ul id="journalList" style="list-style-type: none; padding-left: 0; line-height: 1.6;">
-        <li data-year="2024"><strong>1.</strong> Structure-Adaptive Many-to-Many Data-Sharing for IoT. Jagnyashini Debadarshini, Manish Kaushik, Sudipta Saha. <em>IEEE Transactions on Network and Service Management (TNSM), 2024</em>. Impact Factor ≈ 5.3 <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2024</span></li>
-        <li data-year="2024"><strong>2.</strong> LiVeR: Lightweight Vehicle Detection and Classification in Real-Time. Chandra Shekhar, Jagnyashini Debadarshini, Sudipta Saha. <em>ACM Transactions on Internet of Things (TIOT), 2024</em>. Impact Factor: Not available <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2024</span></li>
-        <li data-year="2023"><strong>3.</strong> TimeCast: Real-Time Many-to-Many Data-Sharing in Low-Power Wireless Distributed Systems. Jagnyashini Debadarshini, Madhav Tummala, Sudipta Saha, Olaf Landsiedel, Mun Choon Chan. <em>IEEE Systems Journal, 2023</em>. Impact Factor ≈ 4.4 <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>4.</strong> iCoord: Efficient Charging of EVs through IoT-Assisted Coordination. Jagnyashini Debadarshini, Megha Vardhan Rejeti, Sudipta Saha, Chandrashekhar Narayan Bhende. <em>Elsevier Ad Hoc Networks, 2023</em>. Impact Factor ≈ 3.0 <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-        <li data-year="2023"><strong>5.</strong> Fine-Grained Frequencies Meet Synchronous Transmission. Jagnyashini Debadarshini, Sudipta Saha. <em>Elsevier Computer and Communications Networks, 2023</em>. Impact Factor ≈ 2.5 <span style="background-color:#28a745;color:white;padding:2px 6px;border-radius:4px;margin-left:8px;">2023</span></li>
-    </ul>
-</section>
-
-<script>
-function sortPublications(listId, selectId) {
-    const list = document.getElementById(listId);
-    const items = Array.from(list.getElementsByTagName('li'));
-    const sortBy = document.getElementById(selectId).value;
-
-    items.sort((a, b) => {
-        const yearA = parseInt(a.getAttribute('data-year'));
-        const yearB = parseInt(b.getAttribute('data-year'));
-        if (sortBy === 'yearDesc') {
-            return yearB - yearA;
-        } else {
-            return yearA - yearB;
-        }
-    });
-
-    // update sequence numbers
-    items.forEach((item, index) => {
-        item.querySelector('strong').innerText = (index + 1) + '.';
-        list.appendChild(item);
-    });
-}
-</script>
-
-        
-        <!-- Research Section -->
         <section id="research">
             <h2>Research Interests</h2>
             <ul>
@@ -349,10 +114,15 @@ function sortPublications(listId, selectId) {
             </ul>
         </section>
 
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Debadarshini, J., et al. "Adaptive Concurrent-Transmission based Real-Time Data Collection in IoT," <i>IEEE IoT Journal</i>, 2024.</li>
+                <li>Debadarshini, J., et al. "Resource Allocation in IoT-assisted Industrial Metaverse," <i>Elsevier Computer Networks</i>, 2025.</li>
+            </ul>
+            <p>Full list available on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+        </section>
 
-
-
-        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:jagnyashini@iitr.ac.in">jagnyashini@iitr.ac.in</a></p>
@@ -363,15 +133,21 @@ function sortPublications(listId, selectId) {
             </p>
         </section>
 
-    </div> <!-- End container -->
+    </div>
 
-    <!-- Footer -->
     <footer>
-        &copy; 2025 Dr. Jagnyashini Debadarshini | IIT Roorkee
+        &copy; 2025 Prof. Jagnyashini Debadarshini | IIT Roorkee
     </footer>
 
-   
+    <script>
+        function showTab(tabId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 
 </body>
-
 </html>

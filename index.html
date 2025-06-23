@@ -86,9 +86,7 @@
     <div class="container">
 
        <section id="about" class="active">
-
-            <!-- Row 1: About Me + News (merged row) -->
-           <div style="
+<div style="
     display: flex;
     flex-wrap: wrap;
     background-color: #f0f8ff;
@@ -120,39 +118,19 @@
         padding: 15px;
         border-left: 5px solid #0059b3;
         border-radius: 8px;
-        max-height: 350px;
-        overflow: hidden;
-        position: relative;
+        max-height: 400px;
+        overflow-y: auto;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     ">
         <h3 style="color: #003366; margin-bottom: 10px;">Latest News</h3>
-        <div style="
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            animation: scrollNews 12s linear infinite;
-        ">
-            <div class="news-item">[June 2025] Keynote talk at Intl Workshop on IoT & Digital Twins (NUS)</div>
-            <div class="news-item">[May 2025] Paper accepted in IEEE Transactions on Industrial Informatics</div>
-            <div class="news-item">[April 2025] TPC member at ACM IoTDI 2026</div>
-            <div class="news-item">[March 2025] Invited speaker at IITR Metaverse Research Symposium</div>
-            <div class="news-item">[Feb 2025] Guest lecture on IoT-Metaverse integration at NUS</div>
-        </div>
+        <div class="news-item" style="margin-bottom: 10px;">[June 2025] Keynote talk at Intl Workshop on IoT & Digital Twins (NUS)</div>
+        <div class="news-item" style="margin-bottom: 10px;">[May 2025] Paper accepted in IEEE Transactions on Industrial Informatics</div>
+        <div class="news-item" style="margin-bottom: 10px;">[April 2025] TPC member at ACM IoTDI 2026</div>
+        <div class="news-item" style="margin-bottom: 10px;">[March 2025] Invited speaker at IITR Metaverse Research Symposium</div>
+        <div class="news-item" style="margin-bottom: 10px;">[Feb 2025] Guest lecture on IoT-Metaverse integration at NUS</div>
     </div>
 
 </div>
-
-<!-- Add animation CSS -->
-<style>
-    @keyframes scrollNews {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(-100%);
-        }
-    }
-</style>
 
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; background-color: #f0f8ff; padding: 20px; margin-bottom: 15px; border-radius: 10px;">

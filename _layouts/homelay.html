@@ -193,37 +193,6 @@ layout: default
 
 </div>
 </div>
-
-     <!-- {% assign banner_images = site.static_files 
-   | where_exp: "file", "file.path contains '/images/banner-'" 
-%}
-      <div class="about-carousel" markdown="0">
-        <button class="about-carousel-btn about-prev" aria-label="Previous image">
-          &#10094;
-        </button>
-        <div class="about-carousel-track">
-          {% for image in banner_images %}
-            <div class="about-carousel-slide {% if forloop.first %}active{% endif %}"
-              data-index="{{ forloop.index0 }}">
-             <img src="{{ image.path | relative_url }}"
-             alt="{{ image.basename | replace: '-', ' ' | capitalize }}"
-             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-
-              <div class="about-carousel-caption">
-                {{ image.basename
-             | remove_first: 'banner-'
-             | replace: '-', ' '
-             | replace: '_', ' '
-             | capitalize }}
-              </div>
-            </div>
-          {% endfor %}
-      </div>
-      <button class="about-carousel-btn about-next" aria-label="Next image">
-        &#10095;
-      </button>
-    </div> -->
-
  </div> 
 </div>
 <script>

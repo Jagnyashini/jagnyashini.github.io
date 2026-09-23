@@ -1,0 +1,20 @@
+# Optional: detailed education and bio for the About page.
+# Basic info (name, photo, links) now lives in _config.yml.
+# Delete this file if you only need the basics.
+
+# EXAMPLE -- replace or delete
+- education:
+  - "(2007 - 2011) B.Tech., CSE, NIT Rourkela"
+  - "(2011 - 2018) SRE, C-DOT, New-Delhi"
+  - "(2018 - 2020) M.Tech., CSE, IIT Bhubaneswar"
+  - "(2020 - 2024) Ph.D., CSE, IIT Bhubaneswar"
+  - "(2024 - 2025) Postdoc, NUS, Singapore"
+  - "(2025 - Present) Asst. Professor, CSE, IIT Roorkee"
+
+  educationshort:
+  - "(2007) B.Tech., CSE, NIT Rourkela"
+  - "(2011) Senior Research Engineer, C-DOT"
+  - "(2018) M.Tech., CSE, IIT Bhubaneswar"
+  - "(2020) Ph.D., CSE, IIT Bhubaneswar"
+  - "(2024) Postdoc, NUS"
+  - "(2025) Assistant Professor, CSE, IIT Roorkee"

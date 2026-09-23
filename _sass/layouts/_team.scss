@@ -1,0 +1,860 @@
+// =============================================================
+// Team page — CSS Grid card layout
+// =============================================================
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.team-card {
+  background: linear-gradient(
+    160deg,
+    var(--bg-card) 0%,
+    var(--bg-secondary) 100%
+  );
+   border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-6);
+  text-align: center;
+  transition: box-shadow var(--transition-slow), transform var(--transition-slow);
+ 
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+
+ .team-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: var(--space-1);
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 0 1px var(--border-color);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+&:hover .team-photo {
+  transform: scale(1.06);
+}
+
+  .team-name {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+    margin-top: 0;
+  }
+
+  .team-info {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-3);
+  }
+
+  .team-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-1);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+// PI card — horizontal, prominent
+.pi-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-8);
+  align-items: center;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .pi-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius-xl);
+    object-fit: cover;
+    border: 2px solid var(--bg-primary);
+    box-shadow:
+      0 0 0 1px var(--border-color),
+      var(--shadow-md);
+
+    @media (max-width: 640px) {
+      margin: 0 auto;
+    }
+  }
+
+  .pi-name {
+    font-family: 'Source Serif 4', Georgia, serif;
+    margin-top: 0;
+    font-size: 1.5rem;
+    &::after { display: none; }
+  }
+
+  .pi-links {
+    display: flex;
+    gap: var(--space-1);
+    margin-top: var(--space-3);
+    flex-wrap: wrap;
+
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+  }
+}
+
+// Alumni table
+.alumni-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  td {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+/* =========================================================
+   CAREER & EDUCATION — MODERN TIMELINE
+   ========================================================= */
+
+.career-section {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0 2rem;
+  overflow: hidden;
+}
+
+
+/* ---------- Heading ---------- */
+
+.career-heading {
+  margin-bottom: 3.5rem;
+  padding-left: 0.25rem;
+}
+
+.career-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #5375ad;
+  margin-bottom: 0.65rem;
+}
+
+.career-heading h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #10294d;
+}
+
+.career-heading h2 span {
+  background: linear-gradient(
+    90deg,
+    #168df5,
+    #7051e8,
+    #a239df
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.career-heading p {
+  max-width: 720px;
+  margin: 1rem 0 0;
+  color: #58729b;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.career-underline {
+  width: 92px;
+  height: 6px;
+  margin-top: 1.2rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #218df4,
+    #7548e8
+  );
+}
+
+/* ---------- Timeline ---------- */
+
+.education-timeline {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 1.5rem 0 1.5rem;
+  gap: 0;
+}
+
+
+/* Main horizontal line */
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.65rem;
+  left: 3.2%;
+  right: 3.2%;
+  height: 4px;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #3198f5 0%,
+    #7650e9 22%,
+    #20b9a9 42%,
+    #f59a32 63%,
+    #ec4f91 82%,
+    #8050e7 100%
+  );
+}
+
+
+/* Arrow at end */
+
+.education-timeline::after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: 1.23rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #8050e7;
+}
+@media (max-width: 700px) {
+
+  .education-timeline::after {
+    content: "↓";
+    position: absolute;
+    left: 0.75rem;
+    right: auto;
+    top: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #8050e7;
+  }
+
+}
+
+
+/* ---------- Mobile Timeline ---------- */
+
+@media (max-width: 700px) {
+
+  .education-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0 1rem 2.2rem;
+    gap: 2.5rem;
+    box-sizing: border-box;
+    overflow-x: visible;
+  }
+
+
+  /* Vertical timeline line */
+
+  .education-timeline::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 0.75rem;
+    right: auto;
+    width: 3px;
+    height: auto;
+    border-radius: 10px;
+
+    background: linear-gradient(
+      180deg,
+      #3198f5 0%,
+      #7650e9 22%,
+      #20b9a9 42%,
+      #f59a32 63%,
+      #ec4f91 82%,
+      #8050e7 100%
+    );
+  }
+
+
+  /* Remove arrow on mobile */
+
+  .education-timeline::after {
+    display: none;
+  }
+
+
+  /* Education items */
+
+  .education-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+}
+/* ---------- Individual item ---------- */
+
+.education-item {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 0.45rem;
+}
+
+
+/* ---------- Timeline node ---------- */
+
+.education-node {
+  position: relative;
+  z-index: 5;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  background: var(--bg-card, #ffffff);
+  border: 2px solid #1929a7;
+  box-shadow:
+    0 0 0 5px rgba(55, 148, 245, 0.12),
+    0 5px 15px rgba(50, 100, 180, 0.15);
+}
+
+.education-node-inner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #1929a7,
+    #6555e9
+  );
+}
+
+
+/* Connector from node to card */
+
+.education-node::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  width: 2px;
+  height: 26px;
+  transform: translateX(-50%);
+  background: currentColor;
+  opacity: 0.35;
+}
+
+
+@media (max-width: 700px) {
+
+  .education-node {
+    position: absolute;
+    z-index: 10;
+
+    /* Align node centre with the vertical timeline */
+    top: 4.2rem;
+    left: -0.7rem;
+
+    width: 22px;
+    height: 22px;
+
+    margin: 0;
+    box-sizing: border-box;
+
+    border-radius: 50%;
+    background: var(--bg-card, #ffffff);
+  border: 2px solid #1929a7;
+
+    box-shadow:
+      0 0 0 4px var(--accent-light),
+      0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+
+
+  .education-node-inner {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    top: 4px;
+    left: 4px;
+
+    border-radius: 50%;
+    background: linear-gradient(
+    135deg,
+    #1929a7,
+    #6555e9)
+  }
+
+
+  .education-node::after {
+    display: none;
+  }
+
+}
+/* ---------- Cards ---------- */
+
+.education-card {
+  position: relative;
+  min-height: 100px;
+  padding: 3.2rem 0.5rem 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  border-left: 2px solid var(--accent);
+  border-bottom: 1px solid var(--border-color);
+
+  background: var(--accent-light);
+
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 45px rgba(40, 75, 130, 0.16),
+    0 5px 12px rgba(40, 75, 130, 0.08);
+}
+
+
+/* ---------- Large circular icon ---------- */
+
+.education-icon {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  width: 76px;
+  height: 76px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  box-shadow:
+    0 8px 22px rgba(45, 75, 130, 0.20);
+  z-index: 3;
+}
+
+.education-icon svg {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.card-blue .education-icon {
+  background: linear-gradient(135deg, #3698f5, #2376df);
+}
+
+.card-purple .education-icon {
+  background: linear-gradient(135deg, #8b63ed, #6845d4);
+}
+
+.card-teal .education-icon {
+  background: linear-gradient(135deg, #27bca9, #119b8e);
+}
+
+.card-orange .education-icon {
+  background: linear-gradient(135deg, #f6a43b, #ed8125);
+}
+
+.card-pink .education-icon {
+  background: linear-gradient(135deg, #ed659b, #d9437e);
+}
+
+@media (max-width: 700px) {
+
+  .education-icon {
+    position: absolute;
+
+    /* Keep icon centred above the card */
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--accent-light);
+    color: var(--accent);
+
+    border: 1px solid var(--accent);
+
+    box-shadow:
+      0 6px 16px rgba(45, 75, 130, 0.18);
+
+    z-index: 10;
+  }
+
+
+  .education-icon svg {
+    width: 34px;
+    height: 34px;
+    display: block;
+  }
+
+
+  /* Keep the individual card colours */
+
+  .card-blue .education-icon {
+    background: linear-gradient(
+      135deg,
+      #3698f5,
+      #2376df
+    );
+  }
+
+  .card-purple .education-icon {
+    background: linear-gradient(
+      135deg,
+      #8b63ed,
+      #6845d4
+    );
+  }
+
+  .card-teal .education-icon {
+    background: linear-gradient(
+      135deg,
+      #27bca9,
+      #119b8e
+    );
+  }
+
+  .card-orange .education-icon {
+    background: linear-gradient(
+      135deg,
+      #f6a43b,
+      #ed8125
+    );
+  }
+
+  .card-pink .education-icon {
+    background: linear-gradient(
+      135deg,
+      #ed659b,
+      #d9437e
+    );
+  }
+
+}
+/* ---------- Year pill ---------- */
+
+.education-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  padding: 0.25rem 0.3rem;
+  margin-bottom: 0.2rem;
+  border-radius: 10px;
+  background-color: var(--accent-light);
+  color: var(--text-primary);
+  border: 1px solid var(--accent);
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow:
+    0 5px 12px rgba(50, 90, 160, 0.16);
+}
+
+
+/* ---------- Text ---------- */
+.education-card h3 {
+    color: var(--text-primary);
+}
+
+.education-card p {
+    color: var(--text-primary);
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.education-card strong {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+
+/* ---------- Colour variations ---------- */
+
+.card-blue {
+  border-top: 2px solid #3198f5;
+}
+
+.card-blue .education-icon,
+.card-blue .education-year {
+  background: linear-gradient(135deg, #3198f5, #2788ed);
+}
+
+.card-blue strong {
+  color: #2189ed;
+}
+
+
+.card-purple {
+  border-top: 2px solid #7950e8;
+}
+
+.card-purple .education-icon,
+.card-purple .education-year {
+  background: linear-gradient(135deg, #7950e8, #6938db);
+}
+
+.card-purple strong {
+  color: #713bdc;
+}
+
+
+.card-teal {
+  border-top: 2px solid #20b7a7;
+}
+
+.card-teal .education-icon,
+.card-teal .education-year {
+  background: linear-gradient(135deg, #20b7a7, #10a998);
+}
+
+.card-teal strong {
+  color: #0da999;
+}
+
+
+.card-orange {
+  border-top: 2px solid #f59a32;
+}
+
+.card-orange .education-icon,
+.card-orange .education-year {
+  background: linear-gradient(135deg, #f8aa38, #f18c25);
+}
+
+.card-orange strong {
+  color: #ed8820;
+}
+
+
+.card-pink {
+  border-top: 2px solid #ed4e91;
+}
+
+.card-pink .education-icon,
+.card-pink .education-year {
+  background: linear-gradient(135deg, #ed4e91, #e83b82);
+}
+
+.card-pink strong {
+  color: #e83b82;
+}
+
+
+/* ---------- Bottom accent ---------- */
+
+.education-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 14%;
+  right: 14%;
+  bottom: 0;
+
+  height: 6px;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.card-blue::after {
+  background: #3198f5;
+}
+
+.card-purple::after {
+  background: #7950e8;
+}
+
+.card-teal::after {
+  background: #20b7a7;
+}
+
+.card-orange::after {
+  background: #f59a32;
+}
+
+.card-pink::after {
+  background: #ed4e91;
+}
+
+
+/* ---------- Footer ---------- */
+
+.career-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.3rem;
+
+  margin-top: 3rem;
+
+  color: #718bb1;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.16em;
+}
+
+.career-footer span {
+  width: 85px;
+  height: 2px;
+
+  background: #b5c8e4;
+}
+
+.career-footer em {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.career-footer b {
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .education-timeline {
+    overflow-x: auto;
+    padding-bottom: 2rem;
+  }
+
+  .education-item {
+    flex: 0 0 205px;
+  }
+
+  .education-timeline::before {
+    left: 2rem;
+    right: 2rem;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .career-section {
+    padding-top: 2rem;
+  }
+
+  .career-heading h2 {
+    font-size: 2.6rem;
+  }
+
+  .career-heading p {
+    font-size: 0.95rem;
+  }
+
+  .education-timeline {
+    padding-top: 3rem;
+  }
+
+  .education-item {
+    flex: 0 0 215px;
+  }
+
+  .education-card {
+    min-height: 100px;
+  }
+
+  .career-footer {
+    gap: 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  .career-footer span {
+    width: 30px;
+  }
+
+}
+
+.team-detail {
+  margin-top: 0.1rem;
+  line-height: 1.5;
+}
+
+.team-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.affiliation-bracket {
+  font-size: 0.9em;
+  opacity: 0.8;
+}

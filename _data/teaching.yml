@@ -1,0 +1,33 @@
+# Courses, shown on the Teaching page in the order listed.
+# Each entry needs: course, title
+# Optional: term, role, url, description
+
+- course: Theory Course 
+  title: Programming with C and C++
+  term: UG with 110+ class strength and PG with 40+ class strength
+  url:
+
+- course: Theory Course 
+  title: Data Structures and Algorithms
+  term: UG with 120+ class strength
+  url:
+
+- course: Lab Course 
+  title: Programming with C and C++
+  term: UG with 110+ class strength
+  url:
+
+- course: Lab Course  
+  title: Applications of Machine Learning
+  term: UG with 40+ class strength
+  url:
+
+- course: Lab Course  
+  title: Programming Lab (Algorithms, Machine Learning, Distributed Systems )
+  term: PG with 40+ class strength
+  url:
+
+- course: Lab Course  
+  title: Cloud Security
+  term: UG with 40+ class strength
+  url:

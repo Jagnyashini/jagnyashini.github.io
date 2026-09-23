@@ -1,0 +1,65 @@
+// =============================================================
+// Footer — warm, structured
+// =============================================================
+
+.site-footer {
+  background-color: var(--bg-secondary);
+  //background-color: rgba(5, 18, 38, 0.95) !important;
+  border-top: 1px solid var(--border-color);
+  //padding: var(--space-12) 0 var(--space-8);
+  padding: var(--space-4) 0 var(--space-2);
+  margin-top: var(--space-16);
+  position: relative;
+
+  .footer-heading {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6875rem;
+    &::after { display: none; }
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    //color: #f5f7fa !important;
+    margin-bottom: var(--space-4);
+    margin-top: 0;
+  }
+
+  p, a {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+       //color: #f5f7fa !important;
+
+    line-height: 1.9;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+  }
+ 
+  .footer-copyright {
+    text-align: center;
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-color);
+   // border-top: 1px solid #f5f7fa;
+    color: var(--text-muted);
+    font-size: 0.6875rem;
+    //color: #f5f7fa !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}

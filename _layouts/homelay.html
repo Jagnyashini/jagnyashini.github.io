@@ -1,0 +1,586 @@
+---
+layout: default
+---
+
+<div class="home-grid">
+  <div>
+    {% include sidebar.html %}
+  </div>
+  <div class="home-content">
+    {{ content }}
+  </div>
+
+ 
+</div>
+
+
+<div class="section-card" style="margin-top: var(--space-6);">
+
+  <h1 class="home-hero2">Recent News</h1>
+
+  <div class="news-timeline2">
+
+    <div class="news-track2">
+
+      {% for article in site.data.news limit:4 %}
+        <div class="news-item2">
+          <div class="news-date2">[{{ article.date }}]</div>
+          <div class="news-headline2">{{ article.headline }}</div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+        <p style="margin: var(--space-4) 0 0;">
+    <a href="{{ '/allnews.html' | relative_url }}">
+      View all news &rarr;
+    </a>
+  </p>
+
+</div>
+
+    
+   
+  
+
+<div class="other-grid">
+  <div class="section-card selected-pubs"> 
+  <h1 class="home-hero2">Recent Publications</h1> 
+  {% capture selected %} 
+    {% bibliography --query @*[selected=true] %} 
+  {% endcapture %} 
+  {% if selected contains "pub-entry" %} 
+    {{ selected }} 
+  {% endif %} 
+  <p style="margin: var(--space-4) 0 0;"> 
+    <a href="{{ '/publications' | relative_url }}"> 
+      All publications &rarr; 
+    </a> 
+  </p> 
+  </div>
+
+  <div class="other-sidebar">
+  <div class="section-card">
+  <div class="facts-card">
+  <h2>Fellowships / Grants</h2>
+  <div class="facts-slideshow">
+     <div class="fact-slide active">
+      <span class="fact-icon">🏆</span>
+      <p>
+        Recieved <strong>ANRF-ECRG</strong>
+        research grant of <strong>67 lakh </strong>(2026–2029).
+      </p>
+    </div>
+    <div class="fact-slide">
+      <span class="fact-icon1">🏆</span>
+      <p>
+        Earlier awarded <strong>PMRF</strong>
+        grant of <strong>55 lakh </strong>(2020–2024).
+      </p>
+    </div>
+    <div class="fact-slide">
+      <span class="fact-icon1">✈️</span>
+      <p>
+        Received a <strong>COMSNETS Travel Grant</strong> to present research
+        work at COMSNETS 2024, Bengaluru.
+      </p>
+    </div>
+
+    <div class="fact-slide">
+      <span class="fact-icon1">✈️</span>
+      <p>
+        Received <strong>Travel Grant</strong> to present research work
+        at ICCCN 2023, Honolulu.
+      </p>
+    </div>
+
+    <div class="fact-slide">
+      <span class="fact-icon1">✈️</span>
+      <p>
+        Received a <strong>Travel Grant</strong> to present research work
+        at IEEE GLOBECOM 2023, Kuala Lumpur.
+      </p>
+    </div>
+
+  </div>
+  <div class="fact-dots1" aria-label="Select an achievement">
+    <button class="fact-dot active" aria-label="Achievement 1"></button>
+    <button class="fact-dot" aria-label="Achievement 2"></button>
+    <button class="fact-dot" aria-label="Achievement 3"></button>
+    <button class="fact-dot" aria-label="Achievement 4"></button>
+  </div>
+</div>
+  </div> 
+  <div class="image-card">
+      <h2 class="image-card-title">Research Highlights</h2>
+  <div class="image-slideshow" id="highlightSlideshow">
+
+    <div class="image-slide active">
+      <img
+        src="{{ '/images/highlights/highlight-1.jpeg' | relative_url }}"
+        alt="Cluster Formation in UAV Swarm"
+      >
+      <div class="image-caption">
+        Cluster Formation in UAV Swarm
+      </div>
+    </div>
+
+    <div class="image-slide">
+      <img
+        src="{{ '/images/highlights/highlight-2.png' | relative_url }}"
+        alt="PiLoT in action for 1-Hop Network"
+      >
+      <div class="image-caption">
+        PiLoT in action for 1-Hop Network
+      </div>
+    </div>
+
+    <div class="image-slide">
+      <img
+        src="{{ '/images/highlights/highlight-3.png' | relative_url }}"
+        alt="SyncCast in Action 1-Hop Network"
+      >
+      <div class="image-caption">
+        SyncCast in Action 1-Hop Network
+      </div>
+    </div>
+    <button
+      class="image-arrow image-arrow-prev"
+      type="button"
+      aria-label="Previous image"
+    >
+      &#10094;
+    </button>
+
+    <button
+      class="image-arrow image-arrow-next"
+      type="button"
+      aria-label="Next image"
+    >
+      &#10095;
+    </button>
+
+  </div>
+
+  <div class="image-card-footer">
+  <div class="image-dots" aria-label="Select an image">
+    <button
+      class="image-dot active"
+      type="button"
+      aria-label="Show image 1"
+    ></button>
+
+    <button
+      class="image-dot"
+      type="button"
+      aria-label="Show image 2"
+    ></button>
+
+    <button
+      class="image-dot"
+      type="button"
+      aria-label="Show image 3"
+    ></button>
+  </div>
+  <div class="code-request">
+    <a
+      href="mailto:jagnyashini@cs.iitr.ac.in?subject=Request%20for%20Research%20Code"
+      aria-label="Request research code by email">
+      Request Code &rarr;
+    </a>
+  </div>
+
+</div>
+</div>
+
+     <!-- {% assign banner_images = site.static_files 
+   | where_exp: "file", "file.path contains '/images/banner-'" 
+%}
+      <div class="about-carousel" markdown="0">
+        <button class="about-carousel-btn about-prev" aria-label="Previous image">
+          &#10094;
+        </button>
+        <div class="about-carousel-track">
+          {% for image in banner_images %}
+            <div class="about-carousel-slide {% if forloop.first %}active{% endif %}"
+              data-index="{{ forloop.index0 }}">
+             <img src="{{ image.path | relative_url }}"
+             alt="{{ image.basename | replace: '-', ' ' | capitalize }}"
+             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+
+              <div class="about-carousel-caption">
+                {{ image.basename
+             | remove_first: 'banner-'
+             | replace: '-', ' '
+             | replace: '_', ' '
+             | capitalize }}
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+      <button class="about-carousel-btn about-next" aria-label="Next image">
+        &#10095;
+      </button>
+    </div> -->
+
+ </div> 
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.querySelector(".news-timeline2");
+  if (!container) return;
+
+  const track = container.querySelector(".news-track2");
+  const originalItems = Array.from(
+    track.querySelectorAll(".news-item2")
+  );
+
+  if (originalItems.length <= 1) return;
+
+  let current = 0;
+  const interval = 3500;
+  const transitionTime = 800;
+
+  // Clone all items for circular scrolling
+  originalItems.forEach(item => {
+    track.appendChild(item.cloneNode(true));
+  });
+
+  const items = track.querySelectorAll(".news-item2");
+
+  function activateItem(index) {
+    items.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    items[index].classList.add("active");
+  }
+
+  function moveTo(index, animate = true) {
+
+    track.style.transition = animate
+      ? `transform ${transitionTime}ms ease`
+      : "none";
+
+    const item = items[index];
+
+    track.style.transform =
+      `translateY(-${item.offsetTop}px)`;
+
+    activateItem(index);
+  }
+
+  // Start with first item
+  moveTo(0, false);
+
+  setInterval(function () {
+
+    current++;
+
+    moveTo(current, true);
+
+    /*
+     * When we reach the cloned first item,
+     * wait for the animation to finish and
+     * silently jump back to the real first item.
+     */
+    if (current === originalItems.length) {
+
+      setTimeout(function () {
+
+        current = 0;
+
+        moveTo(current, false);
+
+      }, transitionTime + 50);
+    }
+
+  }, interval);
+
+});
+</script>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".banner-slide");
+
+  if (slides.length === 0) return;
+
+  let current = 0;
+
+  slides[current].classList.add("active");
+
+  if (slides.length > 1) {
+    setInterval(function () {
+      slides[current].classList.remove("active");
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.add("active");
+    }, 5000);
+  }
+});
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const carousel = document.querySelector(".about-carousel");
+
+  if (!carousel) {
+    console.log("About carousel not found.");
+    return;
+  }
+
+  const slides =
+    carousel.querySelectorAll(".about-carousel-slide");
+
+  const prevButton =
+    carousel.querySelector(".about-prev");
+
+  const nextButton =
+    carousel.querySelector(".about-next");
+
+  if (slides.length === 0) {
+    console.log("No carousel images found.");
+    return;
+  }
+
+  let currentIndex = 0;
+
+
+  function updateCarousel() {
+
+    const total = slides.length;
+
+    slides.forEach(function (slide, index) {
+
+      slide.classList.remove(
+        "active",
+        "prev",
+        "next"
+      );
+
+      /* Centre */
+
+      if (index === currentIndex) {
+
+        slide.classList.add("active");
+
+      }
+
+      /* Previous */
+
+      else if (
+        index ===
+        (currentIndex - 1 + total) % total
+      ) {
+
+        slide.classList.add("prev");
+
+      }
+
+      /* Next */
+
+      else if (
+        index ===
+        (currentIndex + 1) % total
+      ) {
+
+        slide.classList.add("next");
+
+      }
+
+    });
+  }
+
+
+  function showNext() {
+
+    currentIndex =
+      (currentIndex + 1) % slides.length;
+
+    updateCarousel();
+  }
+
+
+  function showPrevious() {
+
+    currentIndex =
+      (currentIndex - 1 + slides.length)
+      % slides.length;
+
+    updateCarousel();
+  }
+
+
+  /* Button clicks */
+
+  nextButton.addEventListener(
+    "click",
+    showNext
+  );
+
+  prevButton.addEventListener(
+    "click",
+    showPrevious
+  );
+
+
+  /* Initial position */
+
+  updateCarousel();
+
+
+  /* Automatic sliding */
+
+  let timer = setInterval(
+    showNext,
+    4000
+  );
+
+
+  /* Pause while mouse is over carousel */
+
+  carousel.addEventListener(
+    "mouseenter",
+    function () {
+
+      clearInterval(timer);
+
+    }
+  );
+
+
+  carousel.addEventListener(
+    "mouseleave",
+    function () {
+
+      timer = setInterval(
+        showNext,
+        4000
+      );
+
+    }
+  );
+
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".fact-slide");
+    const dots = document.querySelectorAll(".fact-dot");
+
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+    let slideshowTimer;
+
+    function showSlide(index) {
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === index);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("active", dotIndex === index);
+      });
+
+      currentSlide = index;
+    }
+
+    function startSlideshow() {
+      slideshowTimer = setInterval(() => {
+        const nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+      }, 4000);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        clearInterval(slideshowTimer);
+        showSlide(index);
+        startSlideshow();
+      });
+    });
+
+    showSlide(0);
+    startSlideshow();
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slideshow = document.querySelector("#highlightSlideshow");
+
+  if (!slideshow) return;
+
+  const slides = slideshow.querySelectorAll(".image-slide");
+  const card = slideshow.closest(".image-card");
+  const dots = card.querySelectorAll(".image-dot");
+  const previousButton = slideshow.querySelector(".image-arrow-prev");
+  const nextButton = slideshow.querySelector(".image-arrow-next");
+
+  let currentSlide = 0;
+  let slideshowTimer;
+
+  function showSlide(index) {
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle(
+        "active",
+        slideIndex === currentSlide
+      );
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle(
+        "active",
+        dotIndex === currentSlide
+      );
+    });
+  }
+
+  function startSlideshow() {
+    clearInterval(slideshowTimer);
+
+    slideshowTimer = setInterval(function () {
+      showSlide(currentSlide + 1);
+    }, 5000);
+  }
+
+  previousButton.addEventListener("click", function () {
+    showSlide(currentSlide - 1);
+    startSlideshow();
+  });
+
+  nextButton.addEventListener("click", function () {
+    showSlide(currentSlide + 1);
+    startSlideshow();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      showSlide(index);
+      startSlideshow();
+    });
+  });
+
+  card.addEventListener("mouseenter", function () {
+    clearInterval(slideshowTimer);
+  });
+
+  card.addEventListener("mouseleave", startSlideshow);
+
+  showSlide(0);
+  startSlideshow();
+});
+</script>

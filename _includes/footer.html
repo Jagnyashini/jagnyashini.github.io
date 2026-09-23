@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2 class="footer-heading">About</h2>
+      <p>
+        {{ site.name }}<br>
+        Assistant Professor, <br>
+        Department of Computer Science & Engineering, <br>
+        Indian Institute of Technology Roorkee<br>
+        <!--{{ site.title }}<br>
+        {{ site.institution }}-->
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Contact</h2>
+      <p>
+        <a href="mailto:{{ site.email }}">{% include icon.html name="envelope" %} {{ site.email }}</a><br>
+        {% if site.links.github and site.links.github != "" %}<a href="{{ site.links.github }}">{% include icon.html name="github" %} GitHub</a><br>{% endif %}
+
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Profile Links</h2>
+      <p>
+        {% if site.links.google_scholar and site.links.google_scholar != "" %}<a href="{{ site.links.google_scholar }}">{% include icon.html name="google-scholar" %} Google Scholar</a><br>{% endif %}
+        {% if site.links.researchgate and site.links.researchgate != "" %}<a href="{{ site.links.researchgate }}">{% include icon.html name="researchgate" %} ResearchGate</a><br>{% endif %}
+        {% if site.links.linkedin and site.links.linkedin != "" %}<a href="{{ site.links.linkedin }}">{% include icon.html name="linkedin" %} LinkedIn</a><br>{% endif %}
+        {% if site.links.orcid and site.links.orcid != "" %}<a href="{{ site.links.orcid }}">{% include icon.html name="orcid" %} ORCID</a><br>{% endif %}       
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Visit</h2>
+      <p>
+        <a href="{{ '/about'}}">About</a><br>
+        <a href="{{ '/publications'}}">Publications</a><br>
+        <a href="{{ '/research' }}">Research</a><br>
+        <a href="{{ '/team' }}">Team</a><br>      
+      </p>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-copyright" style="grid-column: 1 / -1;">
+      &copy; {{ "now" | date: "%Y" }} {{ site.name | escape }}
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>

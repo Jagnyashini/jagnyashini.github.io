@@ -1,0 +1,26 @@
+# Current students and postdocs.
+# Each entry needs: name, photo, info
+# Optional: email, website, scholar, github
+# Photos go in images/ or images/team/
+
+- name: Devendra Singh
+  photo: Devendra.jpeg
+  info: PhD Student
+  research: Distributed ML for Low Power IoT Network
+  last_aff : M.Tech, CSE (USICT, GGSIPU, New-Delhi)
+
+- name: Goutam Halder
+  photo: Goutam.jpg
+  info: PhD Student
+  research: Block-Chain for Low Power Dynamic Network
+  last_aff : M.Tech, CSE (IIT Bhillai)
+
+- name: Pratik Singh
+  photo: Pratik.jpg
+  info: Junior Research Fellow
+  research: Intelligent UAV Swarm Formation Control
+  last_aff : M.Tech, DS & AI (IIT Roorkee)
+
+- name: "This could be you!"
+  photo: rock.jpg
+  join: See openings for more info

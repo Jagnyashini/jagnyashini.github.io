@@ -1,0 +1,38 @@
+# News items shown on the home page sidebar.
+# The 3 most recent are shown; all appear on /allnews.
+# Each entry needs: date, headline
+- date: July, 2026
+  headline: "Book chapter accepted for publication in Transactions on Computer Systems and Networks, 2026"
+
+- date: June, 2026
+  headline: "Research article accepted for IEEE LCN 2026 (Nominated as a candidate for best paper - TOP 3)"
+  
+- date: April, 2026
+  headline: "Received the ANRF Prime Minister Early Career Research Grant 2026"
+
+- date: April, 2026
+  headline: "Research article accepted for IEEE WCNC 2026"
+
+- date: March, 2026
+  headline: "Research work accepted for publication in IEEE Internet of Things Journal"
+
+- date: June, 2025
+  headline: "Joined IIT Roorkee as Assistant Professor"
+
+- date: April, 2025
+  headline: "Research paper accepted for IEEE VTC-Spring"
+
+- date: October, 2024
+  headline: "Joined NUS as Research Fellow"
+
+- date: September, 2024
+  headline: "Journal paper accepted for presentation at ACM SenSys"
+
+- date: April, 2024
+  headline: "Defended my PhD thesis at IIT Bhubaneswar"
+
+- date: August, 2020
+  headline: "Selected for the Prime Minister's Research Fellowship (PMRF)"
+
+- date: August, 2020
+  headline: "Joined IIT Bhubaneswar as a PhD Scholar"

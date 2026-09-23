@@ -1,0 +1,14 @@
+# Former lab members, shown in a table on the Team page.
+# Each entry needs: name, duration, info
+
+- name: Lakhveer & Shiv Sakti
+  duration: 2026-2027
+  info: Optimization of ML Models for Ultra-Low Power IoT Network
+
+- name: Yash & Krishna
+  duration:  2026-2027
+  info: Design of Intelligent Protocol for IoT Network
+
+- name: Vardhan & Rakesh
+  duration: 2026-2027
+  info: Study of Communication Protocol for Batterless IoT Network

@@ -1,7 +1,7 @@
 ---
-title: "Open Position"
+title: "openposition"
 layout: default
-permalink: /Open position/
+permalink: /openposition/
 ---
 <h1>We are looking for new team members!</h1>
 <div class="section-card-container5">

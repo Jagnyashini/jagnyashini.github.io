@@ -1,6 +1,9 @@
 # News items shown on the home page sidebar.
 # The 3 most recent are shown; all appear on /allnews.
 # Each entry needs: date, headline
+- date: October, 2026
+  headline: "🏆 Our paper wins the Best Paper Award at IEEE LCN 2026 (https://lnkd.in/p/e_qtc3VE)! Heartiest congratulations to my undergraduate students, Shiv and Lakhveer!."
+
 - date: July, 2026
   headline: "Book chapter accepted for publication in Transactions on Computer Systems and Networks, 2026"
 
